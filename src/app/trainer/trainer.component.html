@@ -1,3 +1,74 @@
-<p>
-  trainer works!
-</p>
+<main-header></main-header>
+<div id="barba-wrapper">
+  <div class="barba-container team page" data-namespace="page_team" data-page-color="">
+     <div class="pageVisual no-visual">
+        <div class="container no-padding">
+           <div class="col-sm-7 col-md-6 no-padding-left pageVisual__subWrapper">
+              <h1 class="pageVisual__sub homeSection__sub" id="typed"></h1>
+           </div>
+           <div class="col-sm-5 col-md-6 pageVisual__imageWrapper no-padding-right"><img class="pageVisual__image lazy center-block" data-src=""></div>
+        </div>
+     </div>
+     <script type="text/javascript">
+        var typeString = "<p>Pleased to meet you<\/p>"
+     </script>
+     <div class="settoriContent">
+        <div class="container no-padding">
+           <div class="breadcrumbs"><span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="#" rel="v:url" property="v:title">Home</a> / <span class="breadcrumb_last">Trainers</span></span></span></div>
+           <div class="settoriContent__mainText text-center">
+              <h1 class="homeSection__sub settoriContent__sub">Trainers</h1>
+              <div class="settoriContent__txt col-sm-9 col-md-8 no-padding center-block">
+                 <div class="page" title="Page 10">
+                    <div class="section">
+                       <div class="layoutArea">
+                          <div class="column">
+                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                             <p>We love a good story. Tell us yours.</p>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="teamWrap">
+        <div class="container no-padding">
+
+           <ul class="teamWrap__list clearfix">
+
+              <li *ngFor = "let trainers of traineritems" routerLinkActive="active" class="col-md-4 col-sm-6 teamWrap__person lazy no-padding"> <img src="{{trainers.img}}" />
+                 <div class="teamWrap__content text-center"><strong class="teamWrap__name">{{trainers.name}}</strong><span class="teamWrap__role">{{trainers.position}}</span></div>
+                 <div class="teamWrap__overlay"></div>
+              </li>
+
+              <li class="col-md-4 col-sm-6 teamWrap__person teamWrap__work linkTo">
+                 <div class="teamWrap__content">
+                    <strong class="peopleWrap__title homeSection__title">Work with us</strong>
+                    <div class="peopleWrap__exc homeSection__sub">Be the next <br>in line to <br> join us</div>
+                 </div>
+              </li>
+
+
+           </ul>
+
+
+           <div class="formLabel clearfix">
+              <div class="col-sm-8 no-padding formLabel__txtWrapper">
+                 <span class="formLabel__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50.4" height="51.5" baseProfile="tiny">
+                       <g>
+                          <path d="M36.4 21.5c-2 0-3.7 1.7-3.7 3.7s1.7 3.7 3.7 3.7 3.7-1.7 3.7-3.7-1.7-3.7-3.7-3.7zm-22.4 0c-2 0-3.7 1.7-3.7 3.7s1.7 3.7 3.7 3.7 3.7-1.7 3.7-3.7-1.6-3.7-3.7-3.7zm11.2 0c-2 0-3.7 1.7-3.7 3.7s1.7 3.7 3.7 3.7 3.7-1.7 3.7-3.7-1.7-3.7-3.7-3.7z"></path>
+                          <path d="M50 51.5l-15.6-2.8c-2.9 1.1-6 1.7-9.2 1.7C11.3 50.4 0 39.1 0 25.2S11.3 0 25.2 0s25.2 11.3 25.2 25.2c0 5.6-1.9 11.1-5.4 15.5l5 10.8zm-15.8-4.9l12.4 2.3-3.8-8.4.4-.5c3.4-4.1 5.3-9.4 5.3-14.8C48.4 12.4 38 2 25.2 2S2 12.4 2 25.2s10.4 23.2 23.2 23.2c3 0 5.9-.6 8.7-1.7l.3-.1z"></path>
+                       </g>
+                    </svg>
+                 </span>
+                 <strong class="homeSection__sub formLabel__sub">Want to know more?</strong>
+              </div>
+              <div class="col-sm-4 formLabel__buttonWrapper"><a href="#" class="button button--black button--arrow">Get in touch</a></div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+<main-footer></main-footer>
