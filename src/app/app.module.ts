@@ -34,6 +34,7 @@ import { SliderModule } from 'ngx-slider';
 
 const routes: Routes =[
       { path: 'home',      component: HomeComponent },
+      { path: 'contact-us',      component: ContactUsComponent },
       { path: '',          redirectTo: 'home', pathMatch: 'full' },
 ];
 

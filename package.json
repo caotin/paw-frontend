@@ -24,7 +24,6 @@
         "@angular/router": "6.0.1",
         "core-js": "^2.4.1",
         "font-awesome": "^4.7.0",
-        // "ng-simple-slideshow": "^1.2.2",
         "ngx-slider": "0.0.5",
         "rxjs": "^6.1.0",
         "zone.js": "^0.8.26"
