@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, NgForm } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 
@@ -43,6 +43,9 @@ export const APP_MODULES: any[] = [
     AppRoutingModule,
     SharedModule,
     CoreModule,
+    FormsModule, 
+    ReactiveFormsModule
+    // FormsModule
     // SliderModule,
     // SlideshowModule,
     // RouterModule.forRoot(routes)

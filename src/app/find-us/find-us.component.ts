@@ -1,4 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
     selector: 'find-us',
@@ -7,10 +9,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FindUsComponent implements OnInit {
-
-    constructor() { }
-
-    ngOnInit() {
+    ngOnInit(): void {
+        // throw new Error("Method not implemented.");
     }
-
 }
