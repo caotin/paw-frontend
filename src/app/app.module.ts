@@ -25,26 +25,27 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { TrainerDetailComponent } from './trainer-detail/trainer-detail.component';
 
 import { Routes, RouterModule } from '@angular/router';
-
-import { SliderModule } from 'ngx-slider';
+import { TypingAnimationDirective } from 'angular-typing-animation'
+// import { SliderModule } from 'ngx-slider';
 // import { SlideshowModule} from 'ng-simple-slideshow';
 
+// import {Location} from '@angular/common';
 
 
-
-const routes: Routes =[
-      { path: 'home',      component: HomeComponent },
-      { path: '',          redirectTo: 'home', pathMatch: 'full' },
-];
+// const routes: Routes =[
+//       { path: 'home',      component: HomeComponent },
+//       { path: 'course',      component: CourseComponent },
+//       { path: '',          redirectTo: 'home', pathMatch: 'full' },
+// ];
 
 export const APP_MODULES: any[] = [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     CoreModule,
-    SliderModule,
+    // SliderModule,
     // SlideshowModule,
-    RouterModule.forRoot(routes)
+    // RouterModule.forRoot(routes)
 ];
 
 export const APP_SERVICES: any[] = [
@@ -68,7 +69,8 @@ export const APP_COMPONENTS: any[] = [
     TrainerDetailComponent,
     FindUsComponent,
     CourseComponent,
-    CourseDetailComponent
+    CourseDetailComponent,
+    TypingAnimationDirective
 ];
 
 @NgModule({
