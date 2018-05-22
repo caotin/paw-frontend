@@ -1,0 +1,77 @@
+@media (min-width: 1200px){
+
+    .details-courses-main {
+        width: 1200px!important;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: auto;
+        margin-left: auto;
+        height: 100%;
+    }
+    
+    .mat-panel-description {
+        float: left;
+    }
+    
+    .mat-panel-title {
+        flex-grow: 0.1;
+        padding-top: 10px;
+    }
+    
+    .mat-expansion-panel-header-title{
+        flex-grow: 0.1;
+    }
+    
+    .mat-expansion-panel {
+        box-shadow: 0 1px 1px -2px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.0), 0 1px 1px 0 rgba(0,0,0,.12);
+    }
+    
+    .decsription-child{
+        margin-left: 6%;
+    }
+    
+    .demo-tab-group {
+      border: 1px solid #e8e8e8;
+    }
+    
+    .demo-tab-content {
+      padding: 16px;
+    }
+    
+    .mat-card {
+        margin-bottom: 50px;
+    }
+    
+    .demo-tab {
+      height: 80px;
+      margin-left: 100px;
+    }
+    
+    .content-inner-tab {
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .content-inner-tab h1 {
+        margin-bottom: 50px;
+    }
+    
+    .content-post-inner-tab {
+        width: 50%;
+        text-align: center;
+        left: 0;
+       right: 0;
+       margin: auto;
+        text-align: justify;
+    }
+    
+    .content-post-inner-tab p {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    
+    .mat-ink-bar{
+        margin-left: 16px;
+    }
+    
+    }
