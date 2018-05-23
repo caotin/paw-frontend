@@ -1,0 +1,33 @@
+<main-header></main-header>
+<div id="barba-wrapper">
+	<div class="barba-container team page" data-namespace="page_team" data-page-color="">
+
+			<div class="settoriContent">
+			   <div class="container no-padding">
+			      <div class="breadcrumbs"><span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="https://store.is/" rel="v:url" property="v:title">Home</a> / <span class="breadcrumb_last">Maps</span></span></span></div>
+			      <div class="settoriContent__mainText text-center">
+			         <h1 class="homeSection__sub settoriContent__sub">WE'RE THERE</h1>
+			         <div class="settoriContent__txt col-sm-9 col-md-8 no-padding center-block">
+			            <div class="page" title="Page 10">
+			               <div class="section">
+			                  <div class="layoutArea">
+			                     <div class="column">
+			                        <span typingAnimation [typeSpeed]="20" [condition]="start" [startDelay]="1000" [hideCursorOnComplete]="true" >
+												{{stringContent}} </span>
+			                     </div>
+			                  </div>
+			               </div>
+			            </div>
+			         </div>
+			      </div>
+			   </div>
+			</div>
+
+	</div>
+</div>
+        
+    <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="onChoseLocation($event)">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+
+    </agm-map>
+<main-footer></main-footer>

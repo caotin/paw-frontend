@@ -23,7 +23,7 @@ import { FindUsComponent } from './find-us/find-us.component';
 import { CourseComponent } from './course/course.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { TrainerDetailComponent } from './trainer-detail/trainer-detail.component';
-
+import { AgmCoreModule, MapsAPILoader } from '@agm/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TypingAnimationDirective } from 'angular-typing-animation'
 // import { SliderModule } from 'ngx-slider';
@@ -44,7 +44,8 @@ export const APP_MODULES: any[] = [
     SharedModule,
     CoreModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgmCoreModule
     // FormsModule
     // SliderModule,
     // SlideshowModule,
@@ -56,6 +57,8 @@ export const APP_SERVICES: any[] = [
     LocalStorageService,
     ExceptionService,
     AuthService,
+    
+    MapsAPILoader,
     {
         provide: HTTP_INTERCEPTORS,
         useClass: InterceptorService,
