@@ -1,5 +1,4 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
-import { ROUTES } from './trainers-data';
 declare var $:any;
 import { Router } from '@angular/router';
 
