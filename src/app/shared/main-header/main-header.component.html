@@ -1,58 +1,52 @@
-<script>
-   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-   })(window,document,'script','dataLayer','GTM-W4J6QB9');
-</script>
 <!-- alert -->
 <!-- alert -->
 <div id="preloader"></div>
 <header class="header">
-   <div class="container header__wrapper">
-      <div class="hidden-md hidden-lg header__hamburger js-slideout-toggle">
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
+  <div class="container header__wrapper">
+    <div class="hidden-md hidden-lg header__hamburger js-slideout-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="header__logo no-padding-left">
+      <a href="/">
+        <img class="logo-kai" src="assets/img/KAI.svg">
+      </a>
+    </div>
+    <div class="col-xs-12 col-sm-10 col-md-8 header__menu no-padding-right text-right">
+      <div class="mobile_wrapper">
+        <nav id="main_nav" class="menu-main_nav-container">
+          <ul id="menu-main_nav" class="nav navbar-nav text-right sf-menu">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-23 menu-page-9">
+              <a routerLink= "/" >HOME</a>
+            </li>
+            <li id="menu-item-23" *ngFor = "let categories of category_items" routerLinkActive="active" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-23 menu-page-9">
+              <a [routerLink]= "[categories.routerUrl]" >{{categories.title}}</a>
+              <!-- this is child menu -->
+              <!-- this is child menu -->
+              <!--  <ul class="sub-menu">
+                <li id="menu-item-205" *ngFor = "let childcate of cate.class" routerLinkActive="active" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205 menu-page-33">
+                  <a [routerLink]= "['/', cate.title, childcate]">{{childcate}}</a>
+                </li>
+              </ul> -->
+              <!-- this is child menu -->
+              <!-- this is child menu -->
+            </li>
+            <li id="menu-item-19" class="contacts-icon menu-item menu-item-type-post_type menu-item-object-page menu-item-19 menu-page-17"><a routerLink="/contact-us">CONTACT</a></li>
+            <li id="menu-item-62" class="where-icon menu-item menu-item-type-post_type menu-item-object-page menu-item-62 menu-page-27"><a routerLink="/find-us">FIND US</a></li>
+          </ul>
+        </nav>
+        <div class="hidden-md hidden-lg menuContacts text-left">
+          <div class="menuContacts__phone"><i class="phone_icon"></i><a href="tel:'+390497386284">(+84) 049 738 6284</a></div>
+          <div class="menuContacts__email"><i class="email_icon"></i><a href="mailto:info@store.is">info@hanahsport.com</a></div>
+        </div>
       </div>
-      <div class="header__logo no-padding-left">
-         <a href="/">
-            <img class="logo-kai" src="assets/img/KAI.svg">
-         </a>
-      </div>
-      <div class="col-xs-12 col-sm-10 col-md-8 header__menu no-padding-right text-right">
-         <div class="mobile_wrapper">
-            <nav id="main_nav" class="menu-main_nav-container">
-               <ul id="menu-main_nav" class="nav navbar-nav text-right sf-menu">
-
-                   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-23 menu-page-9">
-                     <a routerLink= "/" >HOME</a>
-                  </li>
-
-                  <li id="menu-item-23" *ngFor = "let cate of cate" routerLinkActive="active" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-23 menu-page-9">
-                     <a [routerLink]= "['/', cate.title]" >{{cate.title}}</a>
-                     <ul class="sub-menu">
-
-                        <li id="menu-item-205" *ngFor = "let childcate of cate.class" routerLinkActive="active" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205 menu-page-33"><a [routerLink]= "['/', cate.title, childcate]">{{childcate}}</a>
-                        </li>
-                     </ul>
-                  </li>
-
-                  <li id="menu-item-19" class="contacts-icon menu-item menu-item-type-post_type menu-item-object-page menu-item-19 menu-page-17"><a routerLink="/contact-us">CONTACT</a></li>
-                  <li id="menu-item-62" class="where-icon menu-item menu-item-type-post_type menu-item-object-page menu-item-62 menu-page-27"><a routerLink="/find-us">FIND US</a></li>
-               </ul>
-            </nav>
-            <div class="hidden-md hidden-lg menuContacts text-left">
-               <div class="menuContacts__phone"><i class="phone_icon"></i><a href="tel:'+390497386284">(+84) 049 738 6284</a></div>
-               <div class="menuContacts__email"><i class="email_icon"></i><a href="mailto:info@store.is">info@hanahsport.is</a></div>
-            </div>
-         </div>
-      </div>
-      <div class="hidden-md hidden-lg manifesto-mob-icon">
-         <a href="#">
-            <img src="assets/img/search-find.png" width="24.5" height="24.5">
-         </a>
-      </div>
-   </div>
+    </div>
+    <!-- <div class="hidden-md hidden-lg manifesto-mob-icon">
+      <a href="#">
+        <img src="assets/img/search-find.png" width="24.5" height="24.5">
+      </a>
+    </div> -->
+  </div>
 </header>

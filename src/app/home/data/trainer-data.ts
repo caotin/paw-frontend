@@ -1,4 +1,4 @@
-import {  RouteInfo } from './domain';
+import {  RouteInfo } from '../../shared/trainer/trainer.model';
 
 export const ROUTES: RouteInfo[] = [
     { id: 1, path: '/trainer/Mane', name: 'Mane', position: 'CEO, Teacher', img: 'assets/img/trainner/trainner1.jpg', class: '' },

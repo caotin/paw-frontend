@@ -6,8 +6,7 @@ declare var $:any;
 import { ROUTESC } from './data/course-child-data';
 import { ROUTESP } from './data/course-parent-data';
 import { ROUTESF } from './data/focus-on-data';
-import { ROUTES } from '../shared/trainer/trainers-data';
-
+import { ROUTES } from './data/trainer-data';
 
 @Component({
     selector: 'home',
@@ -17,13 +16,12 @@ import { ROUTES } from '../shared/trainer/trainers-data';
 
 })
 export class HomeComponent implements OnInit {
-    parentcourse: any[];
-    chilecourse: any[];
-    focusitems: any[];
-
+    parent_course_items: any[];
+    child_course_items: any[];
+    focus_items: any[];
     traineritems: any;
 
-    items: any[] = [
+    main_title: any[] = [
         { title: 'Try out the hanah sport center' },
     ];
 
@@ -35,15 +33,19 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit() {
-       this.parentcourse = ROUTESP.filter(parentcourse => parentcourse);
-       this.chilecourse = ROUTESC.filter(chilecourse => chilecourse);
-       this.focusitems = ROUTESF.filter(focusitems => focusitems);
+       this.parent_course_items = ROUTESP.filter(parent_course => parent_course);
+       this.child_course_items = ROUTESC.filter(child_course => child_course);
+       this.focus_items = ROUTESF.filter(focus => focus);
        this.traineritems = ROUTES.filter(traineritems => traineritems);
     }
 
     onTrainerClicked(trainerId: number) {
       console.log('Clicked on button view profile!');
       this.router.navigate(['../trainer/', trainerId]);
+    }
+
+    mainTrainerClicked(){
+        this.router.navigate(['/trainer']);
     }
 
 }

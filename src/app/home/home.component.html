@@ -6,7 +6,7 @@
 	<div class="container no-padding">
 		<div class="homeExp__txt text-center">
 			<h2 class="homeMktg__title homeSection__title">"SPIRIT"</h2>
-         <main-title [items]="items"></main-title>
+         <main-title [main_title]="main_title"></main-title>
          <main-description [descriptions]="descriptions"></main-description>
 			<a routerLink="/home"><main-button></main-button></a>
 		</div>
@@ -14,27 +14,27 @@
 		<!-- content courses -->
 		<!-- content courses -->
 		<ul class="clientsList clearfix">
-			<li *ngFor = "let parentcourse of parentcourse" routerLinkActive="active" class="linkTo client all diesel industries big">
-				<img class="client__image" src="{{parentcourse.img}}" />
+			<li *ngFor = "let parent_course of parent_course_items" routerLinkActive="active" class="linkTo client all diesel industries big">
+				<img class="client__image" src="{{parent_course.img}}" />
 				<div class="client__overlay"></div>
 				<a class="linkFrom" href="#">
 					<div class="client__box text-center">
-						<strong class="client__name text-uppercase">{{parentcourse.title}}</strong>
+						<strong class="client__name text-uppercase">{{parent_course.title}}</strong>
 						<div class="client__sector">
-							<p>{{parentcourse.description}}</p>
+							<p>{{parent_course.description}}</p>
 						</div>
 					</div>
 				</a>
 			</li>
 
-			<li *ngFor = "let chilecourse of chilecourse" routerLinkActive="active" class="linkTo client all cisalfa industries small">
-				<img class="client__image" src="{{chilecourse.img}}" />
+			<li *ngFor = "let child_course of child_course_items" routerLinkActive="active" class="linkTo client all cisalfa industries small">
+				<img class="client__image" src="{{child_course.img}}" />
 				<div class="client__overlay"></div>
 				<a class="linkFrom" href="#">
 					<div class="client__box text-center">
-						<strong class="client__name text-uppercase">{{chilecourse.title}}</strong>
+						<strong class="client__name text-uppercase">{{child_course.title}}</strong>
 						<div class="client__sector">
-							<p>{{chilecourse.description}}</p>
+							<p>{{child_course.description}}</p>
 						</div>
 					</div>
 				</a>
@@ -50,38 +50,29 @@
 	<!-- content focus-on -->
 	<div class="container homeSection__wrapper no-padding">
 
-		<div *ngFor = "let focusitems of focusitems" routerLinkActive="active" class="homeCons__txt col-sm-7 col-md-5 col-lg-push-1">
+		<div *ngFor = "let focus of focus_items" routerLinkActive="active" class="homeCons__txt col-sm-7 col-md-5 col-lg-push-1">
 			<h2 class="homeCons__title homeSection__title"><a class="background-cate">FOCUS ON</a></h2>
-			<h3 class="homeCons__title homeSection__sub">{{focusitems.title}}</h3>
+			<h3 class="homeCons__title homeSection__sub">{{focus.title}}</h3>
 			<div class="homeCons__excerpt homeSection__excerpt" style="font-style: italic;">
-				<p>{{focusitems.description}}</p>
+				<p>{{focus.description}}</p>
 			</div>
-
 			<a routerLink="/focuson"><main-button></main-button></a>
-
 		</div>
 		<div class="homeCons__featWrapper col-sm-5 col-md-6" style="padding-right: 0px">
 			<img class="homeCons__feat lazy" src="assets/img/focuson.jpg" />
 		</div>
 	</div>
-
 </div>
 
-
-<div class="homeMktg homeSection">
+<div class="homeMktg homeSection trainerContent">
     <div class="container no-padding">
         <div class="homeMktg__txt text-center">
             <h2 class="homeMktg__title homeSection__title">
                 Trainers
             </h2>
-            <main-title [items]="items">
-            </main-title>
-            <main-description [descriptions]="descriptions">
-            </main-description>
-            <a routerlink="/trainer">
-                <main-button>
-                </main-button>
-            </a>
+            <main-title [main_title]="main_title"></main-title>
+            <main-description [descriptions]="descriptions"></main-description>
+            <a routerLink="/trainer"><main-button></main-button></a>
             <div class="homeMktg__services">
                 <div class="owl-carousel owl-theme">
                     <main-trainer *ngFor ="let trainer of traineritems" [trainer]="trainer" (trainerClicked)="onTrainerClicked($event)">
@@ -91,6 +82,5 @@
         </div>
     </div>
 </div>
-
 
 <main-footer></main-footer>

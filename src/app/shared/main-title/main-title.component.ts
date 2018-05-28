@@ -7,7 +7,7 @@ import { Input, Output, EventEmitter } from '@angular/core';
     styleUrls: ['./main-title.component.css'],
     template: `
 
-    <h3 class="homeMktg__title homeSection__sub" *ngFor="let item of items"> 
+    <h3 class="homeMktg__title homeSection__sub" *ngFor="let item of main_title">
     {{ item.title }}
     </h3>
 
@@ -22,5 +22,5 @@ export class MainTitleComponent implements OnInit {
     }
 
     @Input()
-    items: any[] = [];
+    main_title: any[] = [];
 }

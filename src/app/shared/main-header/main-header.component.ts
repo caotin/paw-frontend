@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { ROUTES } from './assets'
+import { ROUTES } from './header-data'
 
 declare var $:any;
 
@@ -11,12 +11,12 @@ declare var $:any;
 })
 export class MainHeaderComponent implements OnInit {
 
-    cate: any[] = ROUTES;
+    category_items: any[] = ROUTES;
 
     constructor() { }
 
     ngOnInit() {
-       this.cate = ROUTES.filter(cate => cate);
+       this.category_items = ROUTES.filter(categories => categories);
         $.getScript('../../../assets/js/function-main.min.js');
     }
 

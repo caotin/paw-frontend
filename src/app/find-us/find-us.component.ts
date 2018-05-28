@@ -25,7 +25,7 @@ export class FindUsComponent implements OnInit {
       this.lng = event.coords.lng;
     }
 
-    items: any[] = [
+    main_title: any[] = [
         { title: 'Summer`s comming'},
     ];
 
