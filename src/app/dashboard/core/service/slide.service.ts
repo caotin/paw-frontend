@@ -9,7 +9,7 @@ import { Slide } from '../model/slide';
 @Injectable()
 export class SlideService {
 
-    private baseUrl: string = 'http://localhost:8080/api';
+    private baseUrl: string = 'https://pau-project.herokuapp.com/api';
     private headers = new Headers({ 'Content-Type': 'application/json' });
     private options = new RequestOptions({ headers: this.headers });
     private slide = new Slide();
@@ -22,14 +22,14 @@ export class SlideService {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
         let options = new RequestOptions({ headers: headers });
         // getdata
-        return this._http.get('http://localhost:8080/api/news/count', options).map((response: Response) => response.json());
+        return this._http.get('https://pau-project.herokuapp.com/api/news/count', options).map((response: Response) => response.json());
     }
     // getdata
     getSlide() {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
         let options = new RequestOptions({ headers: headers });
         // getdata
-        return this._http.get('http://localhost:8080/api/slide', options).map((response: Response) => response.json());
+        return this._http.get('https://pau-project.herokuapp.com/api/slide', options).map((response: Response) => response.json());
     }
     // Add data
     createFeedback(slide: Slide) {
@@ -37,7 +37,7 @@ export class SlideService {
         headers.append('Content-Type', 'application/json');
         let options = new RequestOptions({ headers: headers });
         // create
-        return this._http.post('http://localhost:8080/api/slide/new', JSON.stringify(slide), options).map(this.extractData).catch(this.errorHandler);
+        return this._http.post('https://pau-project.herokuapp.com/api/slide/new', JSON.stringify(slide), options).map(this.extractData).catch(this.errorHandler);
 
     }
     // update data
@@ -46,7 +46,7 @@ export class SlideService {
         headers.append('Content-Type', 'application/json');
         let options = new RequestOptions({ headers: headers });
         // create
-        return this._http.put('http://localhost:8080/api/slide/update', JSON.stringify(slide), options).map(this.extractData).catch(this.errorHandler);
+        return this._http.put('https://pau-project.herokuapp.com/api/slide/update', JSON.stringify(slide), options).map(this.extractData).catch(this.errorHandler);
 
     }
 
@@ -55,7 +55,7 @@ export class SlideService {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
         let options = new RequestOptions({ headers: headers });
 
-        return this._http.delete('http://localhost:8080/api/slide/delete/' + id, options).map(this.extractData).catch(this.errorHandler);
+        return this._http.delete('https://pau-project.herokuapp.com/api/slide/delete/' + id, options).map(this.extractData).catch(this.errorHandler);
     }
     // set data
     setter(slide: Slide) {

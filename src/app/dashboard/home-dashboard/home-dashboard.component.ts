@@ -18,7 +18,7 @@ export class HomeDashboardComponent implements OnInit {
         { name: 'jobf2', city: 'sadsd' },
     ];
     public event: Event[];
-    private events: Event;
+    public events: Event;
     countTrainer: String;
     countCourse: String;
     coutNews: String;
@@ -111,5 +111,17 @@ export class HomeDashboardComponent implements OnInit {
             console.log('end');
         }
 
+    }
+    // prevpage
+    prevPage() {
+        this.page--;
+    }
+    // nextpage
+    nextPage() {
+        this.page++;
+    }
+    // set page
+    setPage(pagenumber: number) {
+        this.page = pagenumber;
     }
 }

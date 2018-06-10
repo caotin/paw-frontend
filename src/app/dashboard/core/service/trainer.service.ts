@@ -9,7 +9,7 @@ import { Trainer } from '../model/trainer';
 
 @Injectable()
 export class TrainerService {
-    private baseUrl: string = 'http://localhost:8080/api';
+    private baseUrl: string = 'https://pau-project.herokuapp.com/api';
     private headers = new Headers({ 'Content-Type': 'application/json' });
     private options = new RequestOptions({ headers: this.headers });
     private trainer = new Trainer();

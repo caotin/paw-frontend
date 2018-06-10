@@ -8,7 +8,7 @@ import 'rxjs/add/observable/throw';
 import { Course } from '../../core/model/course';
 @Injectable()
 export class CourseService {
-    private baseUrl: string = 'http://localhost:8080/api';
+    private baseUrl: string = 'https://pau-project.herokuapp.com/api';
     private headers = new Headers({ 'Content-Type': 'application/json' });
     private options = new RequestOptions({ headers: this.headers });
     private course = new Course();
@@ -21,14 +21,14 @@ export class CourseService {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
         let options = new RequestOptions({ headers: headers });
         // getdata
-        return this._http.get('http://localhost:8080/api/course/count', options).map((response: Response) => response.json());
+        return this._http.get('https://pau-project.herokuapp.com/api/course/count', options).map((response: Response) => response.json());
     }
     // getdata
     getCourse() {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
         let options = new RequestOptions({ headers: headers });
         // getdata
-        return this._http.get('http://localhost:8080/api/course', options).map((response: Response) => response.json());
+        return this._http.get('https://pau-project.herokuapp.com/api/course', options).map((response: Response) => response.json());
     }
     // Add data
     createCourse(course: Course) {
@@ -36,7 +36,7 @@ export class CourseService {
         headers.append('Content-Type', 'application/json');
         let options = new RequestOptions({ headers: headers });
         // create
-        return this._http.post('http://localhost:8080/api/course/new', JSON.stringify(course), options).map(this.extractData).catch(this.errorHandler);
+        return this._http.post('https://pau-project.herokuapp.com/api/course/new', JSON.stringify(course), options).map(this.extractData).catch(this.errorHandler);
 
     }
     // update data
@@ -45,7 +45,7 @@ export class CourseService {
         headers.append('Content-Type', 'application/json');
         let options = new RequestOptions({ headers: headers });
         // create
-        return this._http.put('http://localhost:8080/api/course/update', JSON.stringify(course), options).map(this.extractData).catch(this.errorHandler);
+        return this._http.put('https://pau-project.herokuapp.com/api/course/update', JSON.stringify(course), options).map(this.extractData).catch(this.errorHandler);
 
     }
     // delete data
@@ -53,7 +53,7 @@ export class CourseService {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
         let options = new RequestOptions({ headers: headers });
 
-        return this._http.delete('http://localhost:8080/api/course/delete/' + id, options).map(this.extractData).catch(this.errorHandler);
+        return this._http.delete('https://pau-project.herokuapp.com/api/course/delete/' + id, options).map(this.extractData).catch(this.errorHandler);
     }
     // set data
     setter(course: Course) {

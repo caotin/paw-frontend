@@ -10,7 +10,7 @@ export class AuthService {
     constructor(private http: Http) {
     }
     login(username: string, password: string): Observable<boolean> {
-        return this.http.post('http://localhost:8080/auth', JSON.stringify({ username: username, password: password }), this.options)
+        return this.http.post('https://pau-project.herokuapp.com/auth', JSON.stringify({ username: username, password: password }), this.options)
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 let token = response.json() && response.json().token;

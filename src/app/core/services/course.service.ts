@@ -5,7 +5,7 @@ import { Http } from '@angular/http';
 @Injectable()
 export class CourseService {
 
-    private url: string = 'http://localhost:8080/api/';
+    private url: string = 'https://pau-project.herokuapp.com/api/';
 
     constructor(private http: Http) { }
 

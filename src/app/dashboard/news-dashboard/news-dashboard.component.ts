@@ -11,8 +11,8 @@ import { DatePipe } from '@angular/common';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NewsDashboardComponent implements OnInit {
-    private news: News[];
-    private newss: News;
+    public news: News[];
+    public newss: News;
     limit: number;
     numberOfBooks: number;
     page: number = 1;
@@ -20,8 +20,8 @@ export class NewsDashboardComponent implements OnInit {
     pagesIndex = [];
     maxpage: number = 0;
     max: number = 0;
-    private myDate = new Date();
-    private _dateTimeLocal: Date;
+    public myDate = new Date();
+    public _dateTimeLocal: Date;
     editorConfig = {
         editable: true,
         spellcheck: false,
