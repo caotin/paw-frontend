@@ -12,9 +12,9 @@ import { DatePipe } from '@angular/common';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseComponent implements OnInit {
-    private myDate = new Date();
-    private base64textString: String = '';
-    private course: Course;
+    myDate = new Date();
+    base64textString: String = '';
+    course: Course;
     editorConfig = {
         editable: true,
         spellcheck: false,
@@ -25,16 +25,24 @@ export class CourseComponent implements OnInit {
     };
 
     htmlContent = '';
+    // tslint:disable-next-line:variable-name
+    time_start: string;
+    // tslint:disable-next-line:variable-name
+    time_end: string;
     constructor(private courseService: CourseService, private router: Router, public datepipe: DatePipe) { }
 
     ngOnInit() {
         this.course = this.courseService.getter();
+        this.time_start = this.datepipe.transform(this.course.dateStart, 'yyyy-MM-dd');
+        this.time_end = this.datepipe.transform(this.course.dateEnd, 'yyyy-MM-dd');
     }
     processForm() {
         this.course.idCategory = 1;
         this.course.image = this.base64textString;
         this.course.price = 0;
         this.course.createAt = this.datepipe.transform(this.myDate, 'yyyy-MM-dd');
+        this.course.dateStart = this.time_start;
+        this.course.dateEnd = this.time_end;
         if (this.course.idCourse == undefined) {
             this.courseService.createCourse(this.course).subscribe((course) => {
                 alert('Thêm Thành Công Lớp ' + this.course.name + '?');

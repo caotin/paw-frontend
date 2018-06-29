@@ -11,8 +11,8 @@ import { DatePipe } from '@angular/common';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NewsDashboardComponent implements OnInit {
-    private news: News[];
-    private newss: News;
+    news: News[];
+    newss: News;
     limit: number;
     numberOfBooks: number;
     page: number = 1;
@@ -80,7 +80,7 @@ export class NewsDashboardComponent implements OnInit {
     // getdata
     init() {
         this.newsService.getFeedback().subscribe((data) => {
-            console.log(data);
+            // console.log(data);
             this.news = data;
             this.numberOfBooks = this.news.length;
             this.limit = 6;

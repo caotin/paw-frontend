@@ -21,15 +21,15 @@
 
       <div class="settoriContent">
         <div class="container no-padding">
-          <div class="breadcrumbs"><span xmlns:v="#"><span typeof="v:Breadcrumb"><a href="#" rel="v:url" property="v:title">Home</a> / <span class="breadcrumb_last">All Courses</span></span></span></div>
+          <div class="breadcrumbs"><span xmlns:v="#"><span typeof="v:Breadcrumb"><a [routerLink]="['/home']" rel="v:url" property="v:title">Home</a> / <span class="breadcrumb_last">All Courses</span></span></span></div>
           <div class="settoriContent__mainText text-center">
-            <h1 class="homeSection__sub settoriContent__sub">What you'll Leanr in this courses?</h1>
+            <h1 class="homeSection__sub settoriContent__sub">KAI SWIM LÀ SỰ LỰA CHỌN HÀNG ĐẦU!</h1>
             <div class="settoriContent__txt col-sm-9 col-md-8 no-padding center-block">
               <div class="page" title="Page 6">
                 <div class="section">
                   <div class="layoutArea">
                     <div class="column">
-                      <p>This program goes beyond definitions and into the best practices of expert developers. You'll ease in with the basics and quickly ramp up to confidently build websites with pixel-perfect accuracy.</p>
+                      <p>Khóa học là của bạn! – Bạn có quyền yêu cầu đổi giáo viên, thậm chí yêu cầu hoàn tiền 100% nếu chúng tôi không thực hiện đúng chất lượng như đã cam kết!</p>
                     </div>
                   </div>
                 </div>
@@ -49,7 +49,7 @@
             <!-- course -->
             <div *ngFor="let course of courses" routerLinkActive="active" class="serviceWrapper">
               <div class="service linkTo seo pointer">
-                <img class="lazy service__feat" width="270.5" src="https://nameless-beyond-97489.herokuapp.com{{course.image}}">
+                <img class="lazy service__feat" width="270.5" src="http://45.77.44.246:8080{{course.image}}">
                 <h4 class="service__title text-uppercase" >{{course.name}}</h4>
                 <div class="service__excerpt hidden-xs">
                   <p>{{course.description}}

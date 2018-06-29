@@ -9,9 +9,9 @@ import { SlideService } from '../core/service/slide.service';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SettingComponent implements OnInit {
-    private base64textString: String = '';
-    private slide: Slide[];
-    private slides: Slide;
+    base64textString: String = '';
+    slide: Slide[];
+    slides: Slide;
     constructor(private slideService: SlideService, private _router: Router, private ref: ChangeDetectorRef) { }
 
     ngOnInit() {

@@ -36,8 +36,8 @@ export class CourseComponent implements OnInit {
         this.courses=[];
         this.coursez.getAllCourse().subscribe(
             data => {
-                this.courses=data,
-                console.log(data)
+                this.courses=data
+                // console.log(data)
             }
         );
         setInterval(() => {

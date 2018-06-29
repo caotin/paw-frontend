@@ -1,6 +1,5 @@
 <main-header></main-header>
 
-
   <div id="barba-wrapper">
     <div class="barba-container expertise page" data-namespace="page_expertise" data-page-color="">
       <div class="pageVisual no-visual">
@@ -17,12 +16,14 @@
       var typeString = "<p>Using seniority, tools<br \/>\nand learn how to do it<\/p>"
         </script>
 
-
         <div class="settoriContent">
           <div class="container no-padding">
             <div class="breadcrumbs">
-              <span xmlns:v="http://rdf.data-vocabulary.org/#"> Home /
-                <span class="breadcrumb_last">Event</span>
+              <span xmlns:v="http://rdf.data-vocabulary.org/#">
+                <span typeof="v:Breadcrumb">
+                  <a [routerLink]="['/home']" rel="v:url" property="v:title">Home</a> /
+                  <span class="breadcrumb_last">events</span>
+                </span>
               </span>
             </div>
             <div class="settoriContent__mainText text-center">
@@ -45,7 +46,6 @@
                 </li>
               </ul>
 
-
               <div class="formLabel clearfix">
                 <div class="col-sm-8 no-padding formLabel__txtWrapper">
                   <span class="formLabel__icon">
@@ -67,6 +67,5 @@
     </div>
     </div>
   </div>
-
 
 <main-footer></main-footer>

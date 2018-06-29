@@ -9,7 +9,7 @@ import { Event } from '../model/event';
 
 @Injectable()
 export class EventService {
-    private baseUrl: string = 'https://nameless-beyond-97489.herokuapp.com/api';
+    private baseUrl: string = 'http://45.77.44.246:8080/api';
     private headers = new Headers({ 'Content-Type': 'application/json' });
     private options = new RequestOptions({ headers: this.headers });
     private event = new Event();

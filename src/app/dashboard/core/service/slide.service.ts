@@ -9,7 +9,7 @@ import { Slide } from '../model/slide';
 @Injectable()
 export class SlideService {
 
-    private baseUrl: string = 'https://nameless-beyond-97489.herokuapp.com/api';
+    private baseUrl: string = 'http://45.77.44.246:8080/api';
     private headers = new Headers({ 'Content-Type': 'application/json' });
     private options = new RequestOptions({ headers: this.headers });
     private slide = new Slide();
@@ -22,14 +22,14 @@ export class SlideService {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
         let options = new RequestOptions({ headers: headers });
         // getdata
-        return this._http.get('https://nameless-beyond-97489.herokuapp.com/api/news/count', options).map((response: Response) => response.json());
+        return this._http.get('http://45.77.44.246:8080/api/news/count', options).map((response: Response) => response.json());
     }
     // getdata
     getSlide() {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
         let options = new RequestOptions({ headers: headers });
         // getdata
-        return this._http.get('https://nameless-beyond-97489.herokuapp.com/api/slide', options).map((response: Response) => response.json());
+        return this._http.get('http://45.77.44.246:8080/api/slide', options).map((response: Response) => response.json());
     }
     // Add data
     createFeedback(slide: Slide) {
@@ -37,7 +37,7 @@ export class SlideService {
         headers.append('Content-Type', 'application/json');
         let options = new RequestOptions({ headers: headers });
         // create
-        return this._http.post('https://nameless-beyond-97489.herokuapp.com/api/slide/new', JSON.stringify(slide), options).map(this.extractData).catch(this.errorHandler);
+        return this._http.post('http://45.77.44.246:8080/api/slide/new', JSON.stringify(slide), options).map(this.extractData).catch(this.errorHandler);
 
     }
     // update data
@@ -46,7 +46,7 @@ export class SlideService {
         headers.append('Content-Type', 'application/json');
         let options = new RequestOptions({ headers: headers });
         // create
-        return this._http.put('https://nameless-beyond-97489.herokuapp.com/api/slide/update', JSON.stringify(slide), options).map(this.extractData).catch(this.errorHandler);
+        return this._http.put('http://45.77.44.246:8080/api/slide/update', JSON.stringify(slide), options).map(this.extractData).catch(this.errorHandler);
 
     }
 
@@ -55,7 +55,7 @@ export class SlideService {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
         let options = new RequestOptions({ headers: headers });
 
-        return this._http.delete('https://nameless-beyond-97489.herokuapp.com/api/slide/delete/' + id, options).map(this.extractData).catch(this.errorHandler);
+        return this._http.delete('http://45.77.44.246:8080/api/slide/delete/' + id, options).map(this.extractData).catch(this.errorHandler);
     }
     // set data
     setter(slide: Slide) {

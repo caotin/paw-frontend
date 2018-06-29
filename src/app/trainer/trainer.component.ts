@@ -26,7 +26,9 @@ export class TrainerComponent implements OnInit {
     //  }
     ngOnInit() {
         this.trainerService.getAllTrainers().subscribe(
-            data => { this.traineritems = data, console.log(this.traineritems); }
+            data => { this.traineritems = data 
+                // console.log(this.traineritems); 
+            }
         );
         setInterval(() => {
             this.ref.markForCheck();

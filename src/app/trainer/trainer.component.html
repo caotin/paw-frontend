@@ -20,25 +20,31 @@
         <div class="breadcrumbs">
           <span xmlns:v="http://rdf.data-vocabulary.org/#">
             <span typeof="v:Breadcrumb">
-              <a href="#" rel="v:url" property="v:title">Home</a> /
+              <a [routerLink] = "['/home']" rel="v:url" property="v:title">Home</a> /
               <span class="breadcrumb_last">Trainers</span>
             </span>
           </span>
         </div>
         <div class="settoriContent__mainText text-center">
-          <h1 class="homeSection__sub settoriContent__sub">Trainers</h1>
+          <h1 class="homeSection__sub settoriContent__sub">ĐỘI NGŨ GIẢNG VIÊN CHUYÊN NGHIỆP</h1>
           <div class="settoriContent__txt col-sm-9 col-md-8 no-padding center-block">
             <div class="page" title="Page 10">
               <div class="section">
                 <div class="layoutArea">
-                  <div class="column">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                      it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                      typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-                      sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-                      PageMaker including versions of Lorem Ipsum.</p>
-                    <p>We love a good story. Tell us yours.</p>
+                  <div class="column" style="text-align: justify;">
+                    <p>
+                        Đội ngũ giảng viên cho khóa dạy bơi cấp tốc gồm cả nam và nữ được đào tạo bài
+                        bản trong môi trường sư phạm chuyên sâu, hoặc vận động viên bơi lội chuyên nghiệp
+                        và có nhiều kinh nghiệm trong quá trình giảng dạy. Chúng tôi luôn nắm bắt các yêu cầu,
+                        thể trạng và yếu tố tâm lý của từng học viên để có phương án dạy bơi cấp tốc phù hợp
+                        với từng đối tượng.
+                      </p>
+                      <p>
+                        Dưới sự giám sát chặt chẽ tận tâm (1-kèm-1) của các huấn luyện viên, học viên sẽ
+                        nắm bắt được toàn diện các động tác kỹ thuật bơi lội một cách chính xác và nhanh
+                        chóng nhất. Vì thế, chúng tôi hoàn toàn cam kết chất lượng 100%, đáp ứng được mọi
+                        nguyện vọng của học viên, đặc biệt là các học viên với nhu cầu học bơi cấp tốc để
+                        nhanh chóng đạt được mục đích đặt ra trong quỹ thời gian có giới hạn.</p>
                   </div>
                 </div>
               </div>
@@ -51,7 +57,7 @@
       <div class="container no-padding">
         <ul class="teamWrap__list clearfix">
           <li *ngFor="let trainers of traineritems" routerLinkActive="active" class="col-md-4 col-sm-6 teamWrap__person lazy no-padding">
-            <img src="https://nameless-beyond-97489.herokuapp.com{{trainers.image}}" />
+            <img src="http://45.77.44.246:8080{{trainers.image}}" />
             <div class="teamWrap__content text-center">
               <strong class="teamWrap__name">{{trainers.firstName+" "+trainers.lastName}}</strong>
               <span class="teamWrap__role">{{trainers.description}}</span>

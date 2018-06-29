@@ -114,7 +114,7 @@ export const ROUTES: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(ROUTES, { useHash: false })
+        RouterModule.forRoot(ROUTES)
     ],
     exports: [
         RouterModule

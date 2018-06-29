@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Rx';
 @Injectable()
 export class TrainerService {
 
-    private url: string = 'https://nameless-beyond-97489.herokuapp.com/api/';
+    private url: string = 'http://45.77.44.246:8080/api/';
 
     constructor(private http: Http) { }
 

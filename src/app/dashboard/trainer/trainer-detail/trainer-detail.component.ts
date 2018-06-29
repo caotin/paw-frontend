@@ -10,7 +10,7 @@ import { TrainerService } from '../../core/service/trainer.service';
 })
 export class TrainerDetailComponent implements OnInit {
 
-    private trainer: Trainer[];
+    trainer: Trainer[];
     limit: number;
     numberOfBooks: number;
     page: number = 1;

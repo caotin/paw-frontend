@@ -8,6 +8,10 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
+  countCourse = 0;
+  countTrainer = 0;
+  coutNews = 0;
+
   constructor() { }
 
   ngOnInit() {

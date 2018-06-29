@@ -8,6 +8,7 @@ import {Event} from '../../core/model/event';
 })
 export class TableComponent implements OnInit {
     @Input() event: Event[];
+    title = '';
     constructor() { }
 
     ngOnInit() {

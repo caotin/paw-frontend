@@ -10,8 +10,8 @@ import { Location } from '@angular/common';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeedbackComponent implements OnInit {
-    private feedback: Feedback[];
-    private feedbacks: Feedback;
+    feedback: Feedback[];
+    feedbacks: Feedback;
     limit: number;
     numberOfBooks: number;
     page: number = 1;
@@ -81,7 +81,7 @@ export class FeedbackComponent implements OnInit {
     // getdata
     init() {
         this.feedbackService.getFeedback().subscribe((data) => {
-            console.log(data);
+            // console.log(data);
             this.feedback = data;
             this.numberOfBooks = this.feedback.length;
             this.limit = 6;

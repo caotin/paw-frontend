@@ -171,11 +171,11 @@
                          <!-- paging -->
                         <div class="btn-group pull-right" style="text-align: center">
                                     <ul class="pagination" >
-                                      <li [ngClass]="{'disabled': (page == 1)}" (click)="(page == 1) || prevPage()"><a   href="javascript:void(0)">Prev</a></li>
+                                      <li [ngClass]="{'disabled': (page == 1)}" (click)="(page == 1)"><a   href="javascript:void(0)">Prev</a></li>
                                         <li *ngFor="let page1 of  (pagesIndex | slice:pagesIndex.length - 4);"  [ngClass]="{'active': (currentIndex == page)}">
                                             <a (click)="setPage(page1)" href="javascript:void(0)" >{{page1}}</a>
                                         </li>
-                                      <li  [ngClass]="{'disabled': (page == max)}"><a   (click)="(page == max) || nextPage()" href="javascript:void(0)" >Next</a></li>
+                                      <li  [ngClass]="{'disabled': (page == max)}"><a   (click)="(page == max)" href="javascript:void(0)" >Next</a></li>
                                     </ul>
                         </div>
                                  <!-- paging -->

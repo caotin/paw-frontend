@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Rx';
 @Injectable()
 export class ContactUsService {
 
-    private url: string = 'https://nameless-beyond-97489.herokuapp.com/api/';
+    private url: string = 'http://45.77.44.246:8080/api/';
     headers = new Headers({ 'Content-Type': 'application/json' });
 
     constructor(private http: Http) { }

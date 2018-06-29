@@ -8,7 +8,7 @@ import 'rxjs/add/observable/throw';
 import { Feedback } from '../../core/model/feedback';
 @Injectable()
 export class FeedbackService {
-    private baseUrl: string = 'https://nameless-beyond-97489.herokuapp.com/api';
+    private baseUrl: string = 'http://45.77.44.246:8080/api';
     private headers = new Headers({ 'Content-Type': 'application/json' });
     private options = new RequestOptions({ headers: this.headers });
     private feedback = new Feedback();
@@ -21,7 +21,7 @@ export class FeedbackService {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
         let options = new RequestOptions({ headers: headers });
         // getdata
-        return this._http.get('https://nameless-beyond-97489.herokuapp.com/api/feedback', options).map((response: Response) => response.json());
+        return this._http.get('http://45.77.44.246:8080/api/feedback', options).map((response: Response) => response.json());
     }
     // Add data
     createFeedback(feedback: Feedback) {
@@ -29,7 +29,7 @@ export class FeedbackService {
         headers.append('Content-Type', 'application/json');
         let options = new RequestOptions({ headers: headers });
         // create
-        return this._http.post('https://nameless-beyond-97489.herokuapp.com/api/feedback/new', JSON.stringify(feedback), options).map(this.extractData).catch(this.errorHandler);
+        return this._http.post('http://45.77.44.246:8080/api/feedback/new', JSON.stringify(feedback), options).map(this.extractData).catch(this.errorHandler);
 
     }
     // update data
@@ -38,7 +38,7 @@ export class FeedbackService {
         headers.append('Content-Type', 'application/json');
         let options = new RequestOptions({ headers: headers });
         // create
-        return this._http.put('https://nameless-beyond-97489.herokuapp.com/api/feedback/update', JSON.stringify(feedback), options).map(this.extractData).catch(this.errorHandler);
+        return this._http.put('http://45.77.44.246:8080/api/feedback/update', JSON.stringify(feedback), options).map(this.extractData).catch(this.errorHandler);
 
     }
     // delete data
@@ -46,7 +46,7 @@ export class FeedbackService {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
         let options = new RequestOptions({ headers: headers });
 
-        return this._http.delete('https://nameless-beyond-97489.herokuapp.com/api/feedback/delete/' + id, options).map(this.extractData).catch(this.errorHandler);
+        return this._http.delete('http://45.77.44.246:8080/api/feedback/delete/' + id, options).map(this.extractData).catch(this.errorHandler);
     }
     // set data
     setter(feedback: Feedback) {

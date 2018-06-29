@@ -25,11 +25,11 @@ export class FindUsComponent implements OnInit {
     }
 
     items: any[] = [
-        { title: 'We Can Swim!' },
+        { title: 'ĐỂ TÌM ĐƯỢC CHÚNG TÔI!' },
     ];
 
     descriptions: any[] = [
-        { title: 'Heyy!, make your holidays happy with us!!' },
+        { title: '14 Lý Tự Trọng' },
     ];
 
     constructor() { }

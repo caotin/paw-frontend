@@ -83,20 +83,20 @@
               </div>
               <div class="content-card">
                 <!-- panel -->
-                <div class="panel" *ngFor="let tr of slide">
+                <div class="panel" *ngFor="let tr of slide" >
                   <!-- edit -->
                   <button  (click)="updateSlide(tr)||topFunction()" type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" style=" position: absolute;right: -10px;top: -10px;">
                       <i class="material-icons">edit</i>
                   </button>
                   <!-- edit -->
                   <!-- remove -->
-                  <button (click)="deleteSlide(tr)" type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs" style=" position: absolute;right: -10px;top: 10px;">
+                  <button (click)="deleteSlide(tr)" type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs" style=" position: absolute;right: 10px;top: -10px;">
                       <i class="material-icons">close</i>
                   </button>
                  <!-- remove -->
 
                   <div class="panel-body-right" >
-                    <img src="https://nameless-beyond-97489.herokuapp.com{{tr.image}}">
+                    <img src="http://45.77.44.246:8080{{tr.image}}">
                   </div>
                 </div>
                 <!-- panel -->

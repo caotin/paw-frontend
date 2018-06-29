@@ -59,7 +59,8 @@ export class HomeComponent implements OnInit {
         //    this.traineritems = ROUTES.filter(traineritems => traineritems);
         this.home.getTopTrainer().subscribe(
             data => {this.traineritems = data.content
-            console.log(data);}
+            // console.log(data);
+        }
         );
 
         this.fun();
@@ -75,7 +76,7 @@ export class HomeComponent implements OnInit {
     //     this.router.navigate(['../trainer/', trainerId]);
     // }
     onTrainerClicked(trainerId: number) {
-        console.log('Clicked on button view profile!');
+        // console.log('Clicked on button view profile!');
         this.router.navigate(['../trainer/']);
     }
 }

@@ -3,6 +3,8 @@ import { NgForm } from '@angular/forms';
 import { Event } from '../core/model/event';
 import { Router } from '@angular/router';
 import { EventService } from '../core/service/event.service';
+import { DatePipe } from '@angular/common';
+
 @Component({
     selector: 'event-dashboard',
     templateUrl: './event-dashboard.component.html',
@@ -10,8 +12,8 @@ import { EventService } from '../core/service/event.service';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventDashboardComponent implements OnInit {
-    private event: Event;
-    private base64textString: String = '';
+    event: Event;
+    base64textString: String = '';
     editorConfig = {
         editable: true,
         spellcheck: false,
@@ -20,12 +22,15 @@ export class EventDashboardComponent implements OnInit {
         placeholder: 'Nhập Dữ Liệu Vào <3..',
         translate: 'no'
     };
+    time: string;
     constructor(
         private router: Router,
-        private eventService: EventService) { }
+        private eventService: EventService,
+        public datepipe: DatePipe) { }
 
     ngOnInit() {
         this.event = this.eventService.getter();
+        this.time = this.datepipe.transform(this.event.createAt, 'yyyy-MM-dd');
     }
     handleFileSelect(evt) {
         // tslint:disable-next-line:prefer-const
@@ -43,12 +48,13 @@ export class EventDashboardComponent implements OnInit {
     _handleReaderLoaded(readerEvt) {
         const binaryString = readerEvt.target.result;
         this.base64textString = btoa(binaryString);
-        console.log(this.base64textString);
+        // console.log(this.base64textString);
     }
     // create data
     processForm() {
         this.event.idCategory = 1;
         this.event.image = this.base64textString;
+        this.event.createAt = this.time;
         if (this.event.idEvent == undefined) {
             this.eventService.createEvent(this.event).subscribe((data) => {
                 alert('Thêm Thành Công !');

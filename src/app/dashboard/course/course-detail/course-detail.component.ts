@@ -9,7 +9,7 @@ import { CourseService } from '../../core/service/course.service';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseDetailComponent implements OnInit {
-    private course: Course[];
+    course: Course[];
     limit: number;
     numberOfBooks: number;
     page: number = 1;

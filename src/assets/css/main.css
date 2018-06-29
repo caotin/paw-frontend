@@ -75,7 +75,8 @@ code,kbd,pre,samp{
 button,input,optgroup,select,textarea{
     color:inherit;
     font:inherit;
-    margin:0
+    margin:0;
+    font-family: "Roboto", sans-serif;
 }
 button{
     overflow:visible
@@ -127,7 +128,8 @@ body{
 button,input,select,textarea{
     font-family:inherit;
     font-size:inherit;
-    line-height:inherit
+    line-height:inherit;
+    font-family: "Roboto", sans-serif;
 }
 a:focus{
     outline-offset:-2px

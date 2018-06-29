@@ -3,6 +3,8 @@ import { NgForm } from '@angular/forms';
 import { Trainer } from '../../core/model/trainer';
 import { Router } from '@angular/router';
 import { TrainerService } from '../../core/service/trainer.service';
+import { DatePipe } from '@angular/common';
+
 @Component({
     selector: 'trainer',
     templateUrl: './trainer.component.html',
@@ -10,24 +12,25 @@ import { TrainerService } from '../../core/service/trainer.service';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TrainerComponent implements OnInit {
-    private base64textString: String = '';
+    base64textString: String = '';
 
-    private trainer: Trainer;
+    trainer: Trainer;
     // tslint:disable-next-line:variable-name
-    private base64textString_update: String = '';
+    base64textString_update: String = '';
     photos: Object;
+    time: string;
     constructor(
         private router: Router,
-        private trainerService: TrainerService) { }
-
+        private trainerService: TrainerService, public datepipe: DatePipe) { }
     ngOnInit() {
         this.trainer = this.trainerService.getter();
-        console.log(this.trainer.image);
+        this.time = this.datepipe.transform(this.trainer.birthday, 'yyyy-MM-dd');
     }
 
     processForm() {
         this.trainer.idCategory = 1;
         this.trainer.image = this.base64textString;
+        this.trainer.birthday = this.time;
         if (this.trainer.idTrainer == undefined) {
             this.trainerService.createTrainer(this.trainer).subscribe((trainer) => {
                 alert('Thêm Thành Công Giáo Viên ' + this.trainer.lastName + ' !');
@@ -51,7 +54,7 @@ export class TrainerComponent implements OnInit {
         // tslint:disable-next-line:prefer-const
         let files = evt.target.files;
         const file = files[0];
-        console.log(files);
+        // console.log(files);
         if (files && file) {
             const reader = new FileReader();
 
