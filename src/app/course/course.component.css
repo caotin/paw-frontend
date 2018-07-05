@@ -4,3 +4,7 @@ form, input, textarea, select, button, div, p {
   letter-spacing: 0.04em;
   -webkit-font-smoothing: antialiased;
 }
+
+.sologan {
+   line-height: 1.3;
+}

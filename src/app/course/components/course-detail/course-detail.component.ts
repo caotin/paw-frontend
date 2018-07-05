@@ -24,14 +24,14 @@ export class CourseDetailComponent implements OnInit {
         }, 1000);
     }
     course: any ;
-    
+
     start: string;
-    
-    stringSologan1: string="COURSE DETAIL";
-    stringSologan2: string="Lorem Ipsum is simply dummy text of the printing and typesetting industry. ";
+
+    stringSologan1: string="“WE CAN SWIM!”";
+    stringSologan2: string="“Dạy bơi kèm riêng cam kết chất lượng!” – Chúng tôi đã, đang và sẽ theo đúng định hướng “đơn giản” này. Thật vậy, chỉ có dạy bơi kèm riêng, các học viên mới được nắm bắt, khắc phục và thẩm thấu bơi lội nhanh nhất (trong 10-12 buổi).";
 
     constructor(private activatedRoute:ActivatedRoute,private courseService:CourseService,private ref: ChangeDetectorRef) {
-        
+
     }
 
 }

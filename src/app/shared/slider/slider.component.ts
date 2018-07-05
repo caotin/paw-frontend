@@ -19,6 +19,7 @@ export class SliderComponent implements OnInit {
         this.slider.config.showTitle = false;
         this.slider.config.showNavigator = true;
         this.slider.config.showDots = true;
+        // this.slider.config.previewWidth = 20;
 
     }
 

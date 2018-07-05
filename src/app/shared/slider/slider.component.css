@@ -4,10 +4,80 @@
 	margin: 2px -5px 0px -5px;
 }
 
-@media (max-width:400px) {
+@media (min-width: 400px) {
 	.slider-main {
 		margin-top: 0px;
-		height: 400px;
+		height: 300px;
 	}
 
+}
+
+@media (min-width: 320px) {
+  .slider-main {
+    margin-top: 0px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 370px) {
+  .slider-main {
+    margin-top: 0px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 240px) {
+  .slider-main {
+    margin-top: 0px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 720px) {
+  .slider-main {
+    margin-top: 0px;
+    height: 550px;
+  }
+}
+
+@media (min-width: 640px) {
+  .slider-main {
+    margin-top: 0px;
+    height: 500px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .slider-main {
+    margin-top: 0px;
+    height: 700px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .slider-main {
+    margin-top: 0px;
+    height: 550px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slider-main {
+    margin-top: 0px;
+    height: 550px;
+  }
+}
+
+@media (min-width: 1720px) {
+  .slider-main {
+    margin-top: 0px;
+    height: 700px;
+  }
+}
+
+@media (min-width: 2520px) {
+  .slider-main {
+    margin-top: 0px;
+    height: 700px;
+  }
 }

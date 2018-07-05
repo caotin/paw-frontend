@@ -59,6 +59,20 @@
    }
 }
 
+@media (min-width: 1920px){
+   .repo-web {
+    display: inline;
+   }
+
+   .repo {
+      width: 33.333%;
+   }
+
+   .repo-mobile {
+    display: none;
+   }
+}
+
 
 @media (min-width: 1280px){
    .repo-web {

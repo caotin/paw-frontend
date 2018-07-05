@@ -4,3 +4,24 @@ form, input, textarea, select, button, div, p {
   letter-spacing: 0.04em;
   -webkit-font-smoothing: antialiased;
 }
+
+.sologan{
+    font-style: bold;
+    font-weight: lighter;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+
+.sologans{
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 25px;
+    text-transform: lowercase;
+    line-height: 1.1;
+}
+
+.pageVisual__sub br {
+  display: inline;
+
+}

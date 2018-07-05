@@ -1960,15 +1960,15 @@ img{
         position:relative;
         font-family: "Industry Book",sans-serif;
     }
-    .header__menu li.menu-item-has-children .subMenuHandler{
+    /*.header__menu li.menu-item-has-children .subMenuHandler{
         position:absolute;
         right:15px;
         top:15px;
         width:20px;
         height:20px;
         z-index:1000
-    }
-    .header__menu li.menu-item-has-children .subMenuHandler:after,.header__menu li.menu-item-has-children .subMenuHandler:before{
+    }*/
+    /*.header__menu li.menu-item-has-children .subMenuHandler:after,.header__menu li.menu-item-has-children .subMenuHandler:before{
         content:'';
         position:absolute;
         top:50%;
@@ -1978,7 +1978,7 @@ img{
         transform:translate(-50%,-50%);
         background-color:#1e2727;
         display:block
-    }
+    }*/
     .header__menu li.menu-item-has-children .subMenuHandler:before{
         height:2px;
         width:100%
@@ -5321,4 +5321,8 @@ p {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.slide {
+    background-size: cover!important;
 }
