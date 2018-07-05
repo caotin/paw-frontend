@@ -7,7 +7,7 @@
       <div class="homeExp__txt text-center">
          <h2 class="homeMktg__title homeSection__title">"SPIRIT"</h2>
          <main-title [items]="items"></main-title>
-         <main-description [descriptions]="descriptions"></main-description>
+         <main-description class="text-desc" [descriptions]="descriptions"></main-description>
          <!-- <a > -->
             <main-button routerLink="/course"></main-button>
          <!-- </a> -->
@@ -74,31 +74,114 @@
 </div>
 
 
+ <div class="repo-mobile" >
+
 <div class="homeMktg homeSection">
    <div class="container no-padding">
       <div class="homeMktg__txt text-center">
          <h2 class="homeMktg__title homeSection__title">
             Trainers
          </h2>
-         <main-title [items]="items">
-         </main-title>
-         <main-description [descriptions]="descriptions">
-         </main-description>
-         <!-- <a routerlink="/trainer"> -->
-            <main-button routerLink="/trainer">
-            </main-button>
-         <!-- </a> -->
+
+
+
+                <main-button routerLink="/trainer">
+                </main-button>
+
+               <div class="homeMktg__services">
+                  <owl-carousel #owlElement [options]="{items: 1, dots: false, navigation: true, autoplayTimeout:2000,navText:['<', '>'], autoplay: true, loop: true}" [items]="traineritems" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                     <main-trainer *ngFor="let trainers of traineritems" [trainer]="trainers" (trainerClicked)="onTrainerClicked($event)">
+                     </main-trainer>
+                  </owl-carousel>
+
+            </div>
+
+      </div>
+   </div>
+</div>
+
+</div>
+
+
+ <div class="repo-web" >
+
+<div class="homeMktg homeSection">
+   <div class="container no-padding">
+      <div class="homeMktg__txt text-center">
+         <h2 class="homeMktg__title homeSection__title">
+            Trainers
+         </h2>
+                <main-button routerLink="/trainer">
+                </main-button>
+
+               <div class="homeMktg__services">
+                  <owl-carousel #owlElement [options]="{items: 3, dots: false, navigation: true, autoplayTimeout:2000,navText:['<', '>'], autoplay: true, loop: true}" [items]="traineritems" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                     <main-trainer *ngFor="let trainers of traineritems" [trainer]="trainers" (trainerClicked)="onTrainerClicked($event)">
+                     </main-trainer>
+                  </owl-carousel>
+
+            </div>
+
+
+      </div>
+   </div>
+</div>
+
+</div>
+
+
+
+<div class="homeMktg homeSection" style="background-color: #F5F5F5;">
+   <div class="container no-padding">
+      <div class="homeMktg__txt text-center">
+         <h2 class="homeMktg__title homeSection__title">FEEDBACK</h2>
+         <h3 class="homeMktg__title homeSection__sub"> NHỮNG NGƯỜI ĐÃ ĐƯỢC TRẢI NGHIỆM <br /> TẠI KAISPORT</h3>
+
          <div class="homeMktg__services">
-            <owl-carousel #owlElement [options]="{items: 3, dots: false, navigation: true, autoplayTimeout:2000,navText:['<', '>'], autoplay: true, loop: true}" [items]="traineritems" [carouselClasses]="['owl-theme', 'row', 'sliding']">
-               <main-trainer *ngFor="let trainers of traineritems" [trainer]="trainers" (trainerClicked)="onTrainerClicked($event)">
-               </main-trainer>
-            </owl-carousel>
-            <!-- <div class="owl-carousel owl-theme">
-                    <main-trainer *ngFor ="let trainers of traineritems" [trainer]="trainers" (trainerClicked)="onTrainerClicked($event)">
-                    </main-trainer>
-                </div> -->
+            <div class="owl-carousel owl-theme owl-loaded owl-drag">
+               <div class="owl-stage-outer">
+                  <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: 0s;">
+
+                     <div class="owl-item active repo" >
+                        <div class="service linkTo pointer" style="padding-left: 0px; background-color: #F5F5F5">
+                           <img class="lazy service__feat" width="270.5" src="http://45.77.44.246:8080/images/trainer/1529854834.jpg" style="">
+                           <h4 class="service__title text-uppercase">Nguyễn Đình Lý</h4>
+                           <div class="service__excerpt">
+                              <p>Sau 3 tháng học bơi tại trung tâm mình đã tiến bộ hơn rất nhiều, đến thời điểm hiện tại mình đã làm chủ được bản thân khi dưới nước và không còn sợ hãi như trước đây, cảm ơn trung tâm rất nhiều!
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+
+                      <div class="owl-item active repo" >
+                        <div class="service linkTo pointer" style="padding-left: 0px; background-color: #F5F5F5">
+                           <img class="lazy service__feat" width="270.5" src="http://45.77.44.246:8080/images/trainer/1529854834.jpg" style="">
+                           <h4 class="service__title text-uppercase">Dương Văn An</h4>
+                           <div class="service__excerpt">
+                              <p>Sau 3 tháng học bơi tại trung tâm mình đã tiến bộ hơn rất nhiều, đến thời điểm hiện tại mình đã làm chủ được bản thân khi dưới nước và không còn sợ hãi như trước đây, cảm ơn trung tâm rất nhiều!
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="owl-item active repo" >
+                        <div class="service linkTo pointer" style="padding-left: 0px; background-color: #F5F5F5">
+                           <img class="lazy service__feat" width="270.5" src="http://45.77.44.246:8080/images/trainer/1529854834.jpg" style="">
+                           <h4 class="service__title text-uppercase">Cao Văn Lộc</h4>
+                           <div class="service__excerpt">
+                              <p>Sau 3 tháng học bơi tại trung tâm mình đã tiến bộ hơn rất nhiều, đến thời điểm hiện tại mình đã làm chủ được bản thân khi dưới nước và không còn sợ hãi như trước đây, cảm ơn trung tâm rất nhiều!
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
    </div>
 </div>
+
+
 <main-footer></main-footer>

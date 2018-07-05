@@ -3553,7 +3553,8 @@ div.wpcf7 .ajax-loader{
         width:250px;
         height:300px;
         padding-bottom:30px;
-        padding-top:20px
+        padding-top:20px;
+        padding-left: 25px;
     }
     .service__link{
         position:relative;
@@ -3673,7 +3674,7 @@ div.wpcf7 .ajax-loader{
 }
 @media (max-width:767px){
     .owl-carousel .owl-item img{
-        max-width:160px
+        max-width:120px
     }
     .owl-nav{
         width:80px;

@@ -2,7 +2,7 @@ h1, h2, h3, h4, h5, h6, strong, b, th {
   font-weight: bold;
 }
 
-form, input, textarea, select, button {
+form, input, textarea, select, button, div, p {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   letter-spacing: 0.04em;

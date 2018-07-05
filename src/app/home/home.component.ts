@@ -36,11 +36,11 @@ export class HomeComponent implements OnInit {
        }
 
     items: any[] = [
-        { title: 'Try out the hanah sport center' },
+        { title: '“WE CAN SWIM!”' },
     ];
 
     descriptions: any[] = [
-        { title: 'with out 3-days all access pass with no commitment.' },
+        { title: 'Khóa học là của bạn! – Bạn có quyền yêu cầu đổi giáo viên, thậm chí yêu cầu hoàn tiền 100% nếu chúng tôi không thực hiện đúng chất lượng như đã cam kết!' },
     ];
 
     constructor(private activatedRoute: ActivatedRoute, private router: Router, private home: HomeService, private ref: ChangeDetectorRef) {
