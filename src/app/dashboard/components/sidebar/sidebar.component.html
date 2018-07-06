@@ -29,8 +29,8 @@
   <ul class="nav nav-mobile-menu" *ngIf="isMobileMenu()">
       <li>
           <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">dashboard</i>
-              <p class="hidden-lg hidden-md">Tổng Quan</p>
+              <!-- <i class="material-icons">dashboard</i> -->
+              <!-- <p class="hidden-lg hidden-md">Tổng Quan</p> -->
           </a>
       </li>
       <!-- <li class="dropdown">
@@ -48,10 +48,10 @@
           </ul>
       </li> -->
       <li class="dropdown">
-            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" (click)="logout()">
+            <!-- <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" (click)="logout()">
                 <i class="material-icons">person</i>
                 <p class="hidden-lg hidden-md">Đăng Xuất</p>
-            </a>
+            </a> -->
             <!-- <ul class="dropdown-menu">
                 <li><a href="" (click)="logout()">Đăng Xuất</a></li>
 
@@ -68,6 +68,9 @@
                   <p>{{menuItem.title}}</p>
               </a>
           </li>
+
+            <li><a href="javascript:void(0)" (click)="logout()">Đăng Xuất</a></li>
+
       </ul>
   </div>
 </div>
