@@ -1299,6 +1299,9 @@ p {
   line-height: 1.4;
 }
 @media (min-width: 768px) {
+  .wrapper{
+    height: auto;
+  }
   .lead {
     font-size: 21px;
   }
