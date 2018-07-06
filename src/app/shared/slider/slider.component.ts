@@ -37,13 +37,6 @@ export class SliderComponent implements OnInit {
         setInterval(() => {
             this.ref.markForCheck();
         }, 1000);
-        // const slideItems = [
-        //   { src: 'assets/img/slide-01.jpg', title: 'Title 1' },
-        //   { src: 'assets/img/slide-02.jpg', title: 'Title 2' },
-        //   { src: 'assets/img/slide-03.jpg', title: 'Title 3' },
-        // ];
-
-        // this.slider.items = slideItems;
     }
 
 }
