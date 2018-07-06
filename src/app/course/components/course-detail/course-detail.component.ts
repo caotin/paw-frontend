@@ -28,7 +28,7 @@ export class CourseDetailComponent implements OnInit {
     start: string;
 
     stringSologan1: string="“WE CAN SWIM!”";
-    stringSologan2: string="“Dạy bơi kèm riêng cam kết chất lượng!” – Chúng tôi đã, đang và sẽ theo đúng định hướng “đơn giản” này. Thật vậy, chỉ có dạy bơi kèm riêng, các học viên mới được nắm bắt, khắc phục và thẩm thấu bơi lội nhanh nhất (trong 10-12 buổi).";
+    stringSologan2: string="“Dạy bơi kèm riêng cam kết chất lượng!” – Chúng tôi đã, đang và sẽ theo đúng định hướng “đơn giản” này.";
 
     constructor(private activatedRoute:ActivatedRoute,private courseService:CourseService,private ref: ChangeDetectorRef) {
 

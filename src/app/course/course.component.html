@@ -48,21 +48,21 @@
             <!-- course -->
             <!-- course -->
             <div *ngFor="let course of courses" routerLinkActive="active" class="serviceWrapper">
-              <div class="service linkTo seo pointer">
+              <div [routerLink]= "['/course', course.idCourse]" class="service linkTo seo pointer">
                 <img class="lazy service__feat" width="270.5" src="http://45.77.44.246:8080{{course.image}}">
-                <h4 class="service__title text-uppercase" >{{course.name}}</h4>
+                <h4 class="service__title text-uppercase">{{course.name}}</h4>
                 <div class="service__excerpt hidden-xs">
                   <p>{{course.description}}
                   </p>
                 </div>
-                <a class="linkFrom service__link roundButton roundButton--green" [routerLink]= "['/course', course.idCourse]"  ></a>
+                <a class="linkFrom service__link roundButton roundButton--green" [routerLink]= "['/course', course.idCourse]"></a>
               </div>
             </div>
           </div>
           <!-- course -->
           <!-- course -->
           <!-- course -->
-          <div class="formLabel clearfix">
+          <div class="formLabel clearfix" style="background-color: #F5F5F5;">
             <div class="col-sm-8 no-padding formLabel__txtWrapper">
               <span class="formLabel__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50.4" height="51.5" baseProfile="tiny">

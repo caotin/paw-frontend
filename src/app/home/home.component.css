@@ -133,3 +133,11 @@
 .text-desc {
   font-family: "Roboto", sans-serif;
 }
+
+.roundButton{
+  display: none!important;
+}
+
+.roundButton--green {
+  display: none!important;
+}
