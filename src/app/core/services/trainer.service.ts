@@ -9,7 +9,7 @@ export class TrainerService {
     constructor(private http: Http) { }
 
     getAllTrainers() {
-        return this.http.get(this.url + 'trainer')
+        return this.http.get(this.url + 'trainer/all')
             .map(response => response.json())
             .catch(this.handleError);
     }

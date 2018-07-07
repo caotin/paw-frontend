@@ -11,7 +11,7 @@ import { HomeService } from '../core/services/home.service';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
-import {OwlCarousel} from 'ngx-owl-carousel';
+import { OwlCarousel } from 'ngx-owl-carousel';
 
 @Component({
     selector: 'home',
@@ -29,11 +29,11 @@ export class HomeComponent implements OnInit {
     traineritems: any;
 
 
-    @ViewChild('owlElement') owlElement: OwlCarousel
-       fun() {
-         this.owlElement.next([200])
-         //duration 200ms
-       }
+    @ViewChild('owlElement') owlElement: OwlCarousel;
+    fun() {
+        this.owlElement.next([200]);
+        // duration 200ms
+    }
 
     items: any[] = [
         { title: '“WE CAN SWIM!”' },
@@ -58,9 +58,10 @@ export class HomeComponent implements OnInit {
         this.focusitems = ROUTESF.filter(focusitems => focusitems);
         //    this.traineritems = ROUTES.filter(traineritems => traineritems);
         this.home.getTopTrainer().subscribe(
-            data => {this.traineritems = data.content
-            // console.log(data);
-        }
+            data => {
+                this.traineritems = data.content;
+                // console.log(data);
+            }
         );
 
         this.fun();

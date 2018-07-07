@@ -11,7 +11,7 @@ export class ContactUsService {
 
     postContact(data: any) {
         let options = new RequestOptions({ headers: this.headers });
-        return this.http.post(this.url + 'contact', data, options)
+        return this.http.post(this.url + 'contact/new', data, options)
             .map(response => response.json())
             .catch(this.handleError);
     }
