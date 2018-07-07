@@ -37,10 +37,12 @@ export class SidebarComponent implements OnInit {
         if ($(window).width() > 991) {
             return false;
         }
+
         return true;
     }
     logout() {
         localStorage.removeItem('token');
         this.router.navigate(['home']);
     }
+
 }

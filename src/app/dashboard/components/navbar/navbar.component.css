@@ -4481,6 +4481,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 @media (min-width: 768px) {
+  .close-navbar{
+    display: block;
+  }
   .navbar-left {
     float: left !important;
   }
