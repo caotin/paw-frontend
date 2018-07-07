@@ -266,7 +266,16 @@ width: 480px;
 height: 184px;
 margin-top: 10px;
 }
+@media (min-width: 360px) {
+  .panel-body-right img {
+    margin: left;
+    width: 60%;
+    height: 184px;
+    margin-top: 10px;
+    }
+}
 @media (min-width:1200px){
+
   .navbar,.page-footer,main{
       padding-left:270px;
 
