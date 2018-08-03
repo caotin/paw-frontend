@@ -3,7 +3,7 @@ form, input, textarea, select, button, div, p {
   letter-spacing: 0.04em;
   -webkit-font-smoothing: antialiased;
   text-align: justify;
-  font-family: 'Noto Serif', serif!important;
+  font-family: "Roboto", sans-serif !important;
 }
 
 .sologan{
@@ -12,7 +12,7 @@ form, input, textarea, select, button, div, p {
     font-size: 35px;
     text-transform: uppercase;
     color: #099d6e;
-    font-family: 'Noto Serif', serif!important;
+    font-family: "Roboto", sans-serif !important;
 }
 
 
@@ -22,7 +22,7 @@ form, input, textarea, select, button, div, p {
     font-size: 20px;
     text-transform: lowercase;
     line-height: 1.1;
-    font-family: 'Noto Serif', serif!important;
+    font-family: "Roboto", sans-serif !important;
 
 }
 
