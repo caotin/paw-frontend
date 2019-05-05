@@ -1,0 +1,9 @@
+.logo-footer {
+	width: 400px
+}
+
+@media(max-width: 600px) {
+	.logo-footer {
+		width: 200px
+   }
+}

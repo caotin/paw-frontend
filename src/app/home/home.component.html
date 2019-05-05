@@ -1,0 +1,187 @@
+<main-header></main-header>
+<slider></slider>
+
+<div class="homeExp homeSection" style="background-color: #FFFFFF">
+
+   <div class="container no-padding">
+      <div class="homeExp__txt text-center">
+         <h2 class="homeMktg__title homeSection__title">"SPIRIT"</h2>
+         <main-title [items]="items"></main-title>
+         <main-description class="text-desc" [descriptions]="descriptions"></main-description>
+         <!-- <a > -->
+            <main-button routerLink="/course"></main-button>
+         <!-- </a> -->
+      </div>
+
+		<!-- content courses -->
+		<!-- content courses -->
+		<ul class="clientsList clearfix">
+			<li *ngFor = "let parentcourse of parentcourse" routerLinkActive="active" class="linkTo client all diesel industries big">
+				<img class="client__image" src="http://45.77.44.246:8080{{parentcourse.image}}" />
+				<div class="client__overlay"></div>
+				<a class="linkFrom" [routerLink]="['/course',parentcourse.idCourse]">
+					<div class="client__box text-center">
+						<strong class="client__name text-uppercase">{{parentcourse.name}}</strong>
+						<div class="client__sector">
+							<p>{{parentcourse.description}}</p>
+						</div>
+					</div>
+				</a>
+			</li>
+
+			<li *ngFor = "let childcourse of childcourses" routerLinkActive="active" class="linkTo client all cisalfa industries small">
+				<img class="client__image" src="http://45.77.44.246:8080{{childcourse.image}}" />
+				<div class="client__overlay"></div>
+				<a class="linkFrom" [routerLink]="['/course',childcourse.idCourse]">
+					<div class="client__box text-center">
+						<strong class="client__name text-uppercase">{{childcourse.name}}</strong>
+						<div class="client__sector">
+							<p>{{childcourse.description}}</p>
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<!-- content courses -->
+		<!-- content courses -->
+	</div>
+</div>
+
+<div class="homeExp homeSection" style="background-color: #F5F5F5">
+   <!-- content focus-on -->
+   <!-- content focus-on -->
+   <div class="container homeSection__wrapper no-padding">
+
+      <div *ngFor="let focusitems of focusitems" routerLinkActive="active" class="homeCons__txt col-sm-7 col-md-5 col-lg-push-1">
+         <h2 class="homeCons__title homeSection__title">
+            <a class="background-cate">FOCUS ON</a>
+         </h2>
+         <h3 class="homeCons__title homeSection__sub">{{focusitems.title}}</h3>
+         <div class="homeCons__excerpt homeSection__excerpt" style="font-style: normal;">
+            <p>{{focusitems.description}}</p>
+         </div>
+
+         <a routerLink="/news">
+            <main-button></main-button>
+         </a>
+
+      </div>
+      <div class="homeCons__featWrapper col-sm-5 col-md-6" style="padding-right: 0px">
+         <img class="homeCons__feat lazy" src="assets/img/focuson.jpg" />
+         <!-- <iframe src="https://player.vimeo.com/video/137808583?title=0&byline=0&portrait=0" class="homeCons__feat lazy" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+      </div>
+   </div>
+
+</div>
+
+
+ <div class="repo-mobile" >
+
+<div class="homeMktg homeSection">
+   <div class="container no-padding">
+      <div class="homeMktg__txt text-center">
+         <h2 class="homeMktg__title homeSection__title">
+            TRAINERS
+         </h2>
+
+                <main-button routerLink="/trainer">
+                </main-button>
+
+               <div class="homeMktg__services">
+                  <owl-carousel #owlElement [options]="{items: 1, dots: false, navigation: true, autoplayTimeout:2000,navText:['<', '>'], autoplay: true, loop: true}" [items]="traineritems" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                     <main-trainer *ngFor="let trainers of traineritems" [trainer]="trainers" (trainerClicked)="onTrainerClicked($event)">
+                     </main-trainer>
+                  </owl-carousel>
+
+            </div>
+
+      </div>
+   </div>
+</div>
+
+</div>
+
+
+ <div class="repo-web" >
+
+<div class="homeMktg homeSection">
+   <div class="container no-padding">
+      <div class="homeMktg__txt text-center">
+         <h2 class="homeMktg__title homeSection__title">
+            TRAINERS
+         </h2>
+         <h3 class="homeMktg__title homeSection__sub">ĐỘI NGŨ NHÂN VIÊN</h3>
+                <main-button routerLink="/trainer">
+                </main-button>
+
+               <div class="homeMktg__services">
+                  <owl-carousel #owlElement [options]="{items: 3, dots: false, navigation: true, autoplayTimeout:2000,navText:['<', '>'], autoplay: true, loop: true}" [items]="traineritems" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                     <main-trainer *ngFor="let trainers of traineritems" [trainer]="trainers" (trainerClicked)="onTrainerClicked($event)">
+                     </main-trainer>
+                  </owl-carousel>
+
+            </div>
+
+
+      </div>
+   </div>
+</div>
+
+</div>
+
+
+
+<div class="homeMktg homeSection" style="background-color: #F5F5F5;">
+   <div class="container no-padding">
+      <div class="homeMktg__txt text-center">
+         <h2 class="homeMktg__title homeSection__title">FEEDBACK</h2>
+         <h3 class="homeMktg__title homeSection__sub"> "Khách hàng ở KAISPORT"</h3>
+
+         <div class="homeMktg__services">
+            <div class="owl-carousel owl-theme owl-loaded owl-drag">
+               <div class="owl-stage-outer">
+                  <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: 0s;">
+
+                     <div class="owl-item active repo" >
+                        <div class="service linkTo pointer" style="padding-left: 0px; background-color: #F5F5F5">
+                           <img class="lazy service__feat" width="270.5" src="http://dubydu.com/wp-content/uploads/2018/03/headshot.png" style="">
+                           <h4 class="service__title text-uppercase">Nguyễn Đình Lý</h4>
+                           <div class="service__excerpt">
+                              <p>Sau 3 tháng học bơi tại trung tâm mình đã tiến bộ hơn rất nhiều, đến thời điểm hiện tại mình đã làm chủ được bản thân khi dưới nước và không còn sợ hãi như trước đây, cảm ơn trung tâm rất nhiều!
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+
+                      <div class="owl-item active repo" >
+                        <div class="service linkTo pointer" style="padding-left: 0px; background-color: #F5F5F5">
+                           <img class="lazy service__feat" width="270.5" src="http://dubydu.com/wp-content/uploads/2018/03/avatar.jpg" style="">
+                           <h4 class="service__title text-uppercase">Dương Văn An</h4>
+                           <div class="service__excerpt">
+                              <p>Một trong những trung tâm dạy bơi hàng đầu tại Đà Nẵng, mình hài lòng từ chuyên môn cho đến thiết bị vật chất! Bộ phận training vui vẻ, giúp đỡ nhiệt tình những thành viên, thật sự là một trung tâm hoàn hảo.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="owl-item active repo" >
+                        <div class="service linkTo pointer" style="padding-left: 0px; background-color: #F5F5F5">
+                           <img class="lazy service__feat" width="270.5" src="http://dubydu.com/wp-content/uploads/2018/03/CROPPED-Portrait-2.jpg" style="">
+                           <h4 class="service__title text-uppercase">Cao Văn Lộc</h4>
+                           <div class="service__excerpt">
+                              <p>Mình đến với Kaisport thông qua người bạn, thời gian trước thực sự mình rất sợ nước, nhưng kể từ khi đến với Kaisport mình tự tin hơn khi xuống nước, và đặc biệt là sức khoẻ của mình cải thiện một cách đáng kể.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<main-footer></main-footer>

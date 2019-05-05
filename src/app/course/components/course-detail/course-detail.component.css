@@ -1,0 +1,32 @@
+form, input, textarea, select, button, div, p {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  -webkit-font-smoothing: antialiased;
+  text-align: justify;
+  font-family: "Roboto", sans-serif !important;
+}
+
+.sologan{
+    font-style: bold;
+    font-weight: lighter;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #099d6e;
+    font-family: "Roboto", sans-serif !important;
+}
+
+
+.sologans{
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 20px;
+    text-transform: lowercase;
+    line-height: 1.1;
+    font-family: "Roboto", sans-serif !important;
+
+}
+
+.pageVisual__sub br {
+  display: inline;
+
+}

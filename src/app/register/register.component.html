@@ -1,0 +1,133 @@
+<main-header></main-header>
+<div class="magento">
+<div class="account-login">
+  <div class="page-title">
+    <h1>ĐĂNG NHẬP HOẶC ĐĂNG KÝ TUYỂN DỤNG</h1>
+  </div>
+  <form id="login-form" (ngSubmit)="loging()">
+    <input name="form_key" type="hidden">
+    <div class="fieldset">
+      <div class="col2-set">
+        <div class="col-1 registered-users">
+          <h2 class="legend">Đăng Ký Tuyển Dụng</h2>
+          <!-- <p>Nếu bạn đã là thành viên, xin vui lòng đăng nhập bằng email của bạn.</p> -->
+          <ul class="form-list">
+            <li>
+              <label for="email" class="required"><em>*</em>Tên Của Bạn</label>
+              <div class="input-box validation-passed">
+                <input name="text" [(ngModel)]="username" id="usernamme" type="email" class="input-text required-entry validate-email validation-passed" >
+              </div>
+            </li>
+            <li>
+              <label for="email" class="required"><em>*</em>Số Điện Thoại</label>
+              <div class="input-box validation-passed">
+                <input style="background-color: wheat" name="text" [(ngModel)]="phonenumber" id="phonenumber" type="email" class="input-text required-entry validate-email validation-passed background-input" >
+              </div>
+            </li>
+            <li>
+              <label class="required"><em>*</em>Địa Chỉ</label>
+              <div class="input-box validation-passed">
+                <input type="text" name="address" [(ngModel)]="address" class="input-text required-entry validate-password validation-passed" >
+              </div>
+            </li>
+            <li>
+              <label class="required"><em>*</em>E - Mail</label>
+              <div class="input-box validation-passed">
+                <input style="background-color: wheat" type="text" name="email" [(ngModel)]="email" class="input-text required-entry validate-password validation-passed" >
+              </div>
+            </li>
+            <li>
+              <label class="required"><em>*</em>Ngày Sinh</label>
+              <div class="input-box validation-passed">
+                <input type="text" name="dateofbirth" [(ngModel)]="dateofbirth" class="input-text required-entry validate-password validation-passed" >
+              </div>
+            </li>
+            <li>
+              <label class="required"><em>*</em>Giới Tính</label>
+              <div class="input-box validation-passed">
+                <select style="width: 330px;" class="input-text required-entry validate-password validation-passed background-input">
+                  <option>Nam</option>
+                  <option>Nữ</option>
+                  <option>Khác</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <label class="required"><em>*</em>Facebook Link</label>
+              <div class="input-box validation-passed">
+                <input type="text" name="facebook-link" [(ngModel)]="facebooklink" class="input-text required-entry validate-password validation-passed" >
+              </div>
+            </li>
+            <li>
+              <label class="required"><em>*</em>Số Điện thoại dùng cho Viber</label>
+              <div class="input-box validation-passed">
+                <input style="background-color: wheat" type="text" name="viber" [(ngModel)]="viber" class="input-text required-entry validate-password validation-passed" >
+              </div>
+            </li>
+            <li>
+              <label class="required"><em>*</em>Số Điện thoại dùng cho Zalo</label>
+              <div class="input-box validation-passed">
+                <input type="text" name="zalo" [(ngModel)]="zalo" class="input-text required-entry validate-password validation-passed" >
+              </div>
+            </li>
+            <li>
+              <label class="required"><em>*</em>CMND</label>
+              <div class="input-box validation-passed">
+                <input style="background-color: wheat" type="text" name="id" [(ngModel)]="id" class="input-text required-entry validate-password validation-passed" >
+              </div>
+            </li>
+          </ul>
+          <div class="form-list">
+            <div class="note">
+              <!-- <a href="#">Bạn đã quên Password?</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-2 new-users">
+          <div class="form-list row-second">
+            <li>
+              <label class="required"><em>*</em>Quá Trình Học Tập</label>
+              <div class="input-box validation-passed">
+                <textarea type="text" name="study-state" [(ngModel)]="studystate" class="input-text required-entry validate-password validation-passed"></textarea>
+              </div>
+            </li>
+            <li>
+              <label class="required"><em>*</em>Bằng cấp liên quan đến Bơi lội</label>
+              <div class="input-box validation-passed">
+                <textarea type="text" name="certificate" [(ngModel)]="certificate" class="input-text required-entry validate-password validation-passed"></textarea>
+              </div>
+            </li>
+            <li>
+              <label class="required"><em>*</em>Khung giờ rảnh để có thể đi dạy bơi kèm riêng được</label>
+              <div class="input-box validation-passed">
+                <textarea type="text" name="freetime" [(ngModel)]="freetime" class="input-text required-entry validate-password validation-passed"></textarea>
+              </div>
+            </li>
+            <li>
+              <label class="required"><em>*</em>Yêu cầu mức lương/Tháng hoặc Tiết dạy</label>
+              <div class="input-box validation-passed">
+                <textarea type="text" name="salaryrequirement" [(ngModel)]="salaryrequirement" class="input-text required-entry validate-password validation-passed"></textarea>
+              </div>
+            </li>
+            <div class="buttons-set">
+              <button type="submit" class="button button--black homeSection__button" name="send"><span><span>ĐĂNG KÝ</span></span></button>
+            </div>
+            <div class="below-reg">
+              <h2 class="legend">Đăng Nhập</h2>
+              <p>Nếu bạn đã là thành viên, xin vui lòng đăng nhập bằng email của bạn.</p>
+              <div class="buttons-set">
+                <button type="button" disabled class="button button--black homeSection__button">
+                <span>
+                  <span [routerLink]="['/login']">ĐĂNG NHẬP</span>
+                </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+<main-footer></main-footer>

@@ -1,0 +1,97 @@
+.magento {
+	background: #fff;
+	overflow: hidden;
+}
+
+#error {
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #f1f1f1;
+	padding: 160px 0;
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b, th {
+	font-weight: normal;
+}
+
+@media (min-width: 1480px){
+.containers, .col2-left-layout, .account-login, .newsletter-banner-container {
+	margin-top: 100px;
+	margin-bottom: 50px;
+	}
+}
+
+@media (max-width: 670px){
+.containers, .col2-left-layout, .account-login, .newsletter-banner-container {
+	width: 670px;
+	}
+}
+
+@media (max-width: 415px){
+.containers, .col2-left-layout, .account-login, .newsletter-banner-container {
+	width: 415px;
+	}
+}
+
+
+@media (max-width: 375px){
+.containers, .col2-left-layout, .account-login, .newsletter-banner-container {
+	width: 375px;
+	}
+}
+
+@media (max-width: 325px){
+.containers, .col2-left-layout, .account-login, .newsletter-banner-container {
+	width: 320px;
+	}
+}
+
+#error h2 {
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 1em;
+	margin-bottom: 12px;
+	text-align: center;
+}
+
+#error h3 {
+	font-size: 18px;
+	line-height: 1em;
+	margin-bottom: 36px;
+	text-align: center;
+}
+
+#error form {
+	display: inline-block;
+	width: 350px;
+}
+
+form, input, textarea, select, button {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.04em;
+	-webkit-font-smoothing: antialiased;
+}
+#error fieldset {
+	border: 1px solid #555;
+	display: block;
+	padding: 10px 12px;
+	position: relative;
+}
+
+#error input[type=text] {
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#error fieldset::after {
+	color: rgb(17, 17, 17);
+	content: "→";
+	display: block;
+	position: absolute;
+	margin-top: -7px;
+	top: 50%;
+	right: 12px;
+}

@@ -1,0 +1,19 @@
+.logo-kai {
+	width: 183px;
+	height: 33px
+}
+
+@media (max-width: 620px ){
+	.logo-kai {
+		width: 183px;
+		height: 33px;
+		vertical-align: middle;
+		display: inline-block;
+		position: relative;
+	}
+}
+
+.phone_second {
+  padding-left:  43px;
+  display: inline;
+}

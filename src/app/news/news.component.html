@@ -1,0 +1,129 @@
+<main-header></main-header>
+<div id="barba-wrapper">
+  <div class="barba-container lifestyle page" data-namespace="page_lifestyle" data-page-color="">
+    <div class="pageVisual no-visual">
+      <div class="container no-padding">
+        <div class="col-sm-7 col-md-6 no-padding-left pageVisual__subWrapper">
+          <h1 class="pageVisual__sub homeSection__sub" id="typed"></h1>
+        </div>
+        <div class="col-sm-5 col-md-6 pageVisual__imageWrapper no-padding-right">
+          <img class="pageVisual__image lazy center-block" data-src="">
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var typeString = "<p>Snapshots of everyday life<\/p>"
+    </script>
+
+
+    <div class="settoriContent">
+      <div class="container no-padding">
+        <div class="breadcrumbs">
+          <span xmlns:v="http://rdf.data-vocabulary.org/#">
+            <span typeof="v:Breadcrumb">
+              <a [routerLink]="['/home']" rel="v:url" property="v:title">Home</a> /
+              <span class="breadcrumb_last">news</span>
+            </span>
+          </span>
+        </div>
+        <div class="settoriContent__mainText text-center">
+          <h1 class="homeSection__sub settoriContent__sub">“TẠI SAO NÊN CHỌN CHÚNG TÔI?”</h1>
+          <div class="settoriContent__txt col-sm-9 col-md-8 no-padding center-block">
+            <div class="page" title="Page 11">
+              <div class="section">
+                <div class="layoutArea">
+                  <div class="column">
+
+                    <p>KAI SWIM là trung tâm dạy bơi kèm riêng với tiêu chí cung cấp cho học viên giờ học
+                      an toàn, hiệu quả nhất. Bằng việc cung cấp các khóa dạy bơi kèm riêng cam kết chất
+                      lượng, giảng dạy theo chuẩn kiến thức, phù hợp với thể trạng, khả năng, thời gian học
+                      tập của học viên. Chúng tôi đã và đang giúp cho rất nhiều học viên sợ nước, chưa biết
+                      bơi đến biết bơi và bơi đẹp trong khoảng 10-12 buổi học.</p>
+
+                    <p>Trong suốt hơn 07 năm hoạt động với các lớp bơi kèm riêng tại nhà hoặc hồ bơi tự
+                      chọn, chúng tôi đã nghiên cứu, lựa chọn cho mình hướng đi riêng. Phương châm hoạt
+                      động của chúng tôi là Dạy bơi kèm riêng cam kết chất lượng, chúng tôi sẽ chỉ nhận học
+                      viên với cam kết biết bơi 100% cùng các điều kiện căn bản của một môn thể thao: sự
+                      yêu thích và nhiệt tình với học bơi, muốn khắc phục chứng sợ nước &amp; quan trọng nhất
+                      là cùng hợp tác với giáo viên.</p>
+
+                    <p>
+                      Với các bé nhỏ tuổi (dưới 6 tuổi) và sợ nước, một khóa bơi căn bản kéo dài một thời
+                      gian nhất định (thường là 12-15 buổi) sẽ giúp bé dạn dĩ hơn với môi trường nước.
+                      Được các thầy cô hướng dẫn cho những động tác căn bản của quạt tay, đạp chân và
+                      thở nước, bé sẽ có những khái niệm hết sức căn bản cho việc biết bơi sau này. Sự
+                      an toàn của bé nếu có những sơ xuất không may xảy ra với nước, bé cũng có thể tự
+                      mình ứng phó được trong phạm vi nhất định.</p>
+                    <p>
+                      Được sự tin tưởng và ủng hộ của Quý khách hàng, chúng tôi luôn tâm niệm và duy
+                      trì phương châm hoạt động như đã đề ra nhằm giữ uy tín và trách nhiệm của một
+                      người thầy, cũng như duy trì lòng đam mê và tự hào mỗi khi có một học viên được
+                      hoàn tất cho mỗi khóa học bơi.
+                                            </p>
+
+                    <!-- <h2>SỨ MỆNH</h2>
+                      <p>
+                        Mang đến CHẤT LƯỢNG CHO HỌC VIÊN, nhiệt tình và trách nhiệm ở phương pháp,
+                        TẠO niềm vui và hứng thú với bơi lội, PHÁT TRIỂN bơi lội, PHÒNG CHỐNG ĐUỐI
+                        NƯỚC! </p>
+                      <h2>  PHƯƠNG CHÂM HOẠT ĐỘNG </h2>
+                      <p>
+                        “Dạy bơi kèm riêng cam kết chất lượng!” – Chúng tôi đã, đang và sẽ theo đúng định hướng
+                        “đơn giản” này. Thật vậy, chỉ có dạy bơi kèm riêng, các học viên mới được nắm bắt, khắc phục
+                        và thẩm thấu bơi lội nhanh nhất (trong 10-12 buổi).</p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="lifestyleWrapper">
+      <div class="container">
+        <div class="col-md-8 center-block">
+          <div class="lifestyleWrapper__box" *ngFor="let news of listNews">
+            <strong class="homeSection__title lifestyleWrapper__title text-center">{{news.title}}</strong>
+            <div class="homeSection__text lifestyleWrapper__txt text-center">
+              <div class="page" title="Page 11">
+                <div class="section">
+                  <div class="layoutArea">
+                    <div class="column">
+                      <p>{{news.description}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="lifestyleWrapper__list clearfix">
+              <li class="lifestyleWrapper__img no-padding" [innerHTML]="news.details">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="formLabel clearfix">
+          <div class="col-sm-8 no-padding formLabel__txtWrapper">
+            <span class="formLabel__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50.4" height="51.5" baseProfile="tiny">
+                <g>
+                  <path d="M36.4 21.5c-2 0-3.7 1.7-3.7 3.7s1.7 3.7 3.7 3.7 3.7-1.7 3.7-3.7-1.7-3.7-3.7-3.7zm-22.4 0c-2 0-3.7 1.7-3.7 3.7s1.7 3.7 3.7 3.7 3.7-1.7 3.7-3.7-1.6-3.7-3.7-3.7zm11.2 0c-2 0-3.7 1.7-3.7 3.7s1.7 3.7 3.7 3.7 3.7-1.7 3.7-3.7-1.7-3.7-3.7-3.7z"></path>
+                  <path d="M50 51.5l-15.6-2.8c-2.9 1.1-6 1.7-9.2 1.7C11.3 50.4 0 39.1 0 25.2S11.3 0 25.2 0s25.2 11.3 25.2 25.2c0 5.6-1.9 11.1-5.4 15.5l5 10.8zm-15.8-4.9l12.4 2.3-3.8-8.4.4-.5c3.4-4.1 5.3-9.4 5.3-14.8C48.4 12.4 38 2 25.2 2S2 12.4 2 25.2s10.4 23.2 23.2 23.2c3 0 5.9-.6 8.7-1.7l.3-.1z"></path>
+                </g>
+              </svg>
+            </span>
+            <strong class="homeSection__sub formLabel__sub">Want to know more?</strong>
+          </div>
+          <div class="col-sm-4 formLabel__buttonWrapper">
+            <a routerLink="/home" class="button button--black button--arrow">Get in touch</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<main-footer></main-footer>

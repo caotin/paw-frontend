@@ -1,0 +1,185 @@
+<div class="wrapper">
+
+  <div class="sidebar" data-color='red' data-image="">
+    <!-- sidebar -->
+    <app-sidebar></app-sidebar>
+    <!-- sidebar -->
+    <div class="sidebar-background" style="background-image: url(../assets/img/sidebar-4.jpg)"></div>
+  </div>
+  <div class="main-panel">
+    <!-- navbar -->
+    <app-navbar></app-navbar>
+    <!-- navbar -->
+
+    <!-- main -->
+    <div class="main-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- card -->
+            <div class="card">
+              <div class="card-header" data-background-color="red">
+                <h4 class="title">Tin Tức</h4>
+
+              </div>
+              <div class="card-content">
+                <!-- card -->
+
+                <form (ngSubmit)="processForm()" ngNativeValidate>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="fullName">Tiêu đề</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" placeholder="Tiêu đề" name="title" [(ngModel)]="newss.title" required>
+                    </div>
+                  </div>
+                  <!-- <div class="row">
+                        <div class="col-25">
+                          <label for="lname">Thời Gian(Ngày Giờ)</label>
+                        </div>
+                        <div class="col-75">
+                          <input type="datetime-local"   placeholder="Thời Gian" name="_dateTimeLocal" [(ngModel)]="_dateTimeLocal">
+                        </div>
+                      </div> -->
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="country">Miêu tả</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" placeholder="Miêu tả" name="description" [(ngModel)]="newss.description" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="country">Chi Tiết</label>
+                    </div>
+                    <div class="col-75">
+                      <app-ngx-editor [config]="editorConfig" [spellcheck]="true" name="details" [(ngModel)]="newss.details" class="details_ngx"
+                        required></app-ngx-editor>
+                    </div>
+                  </div>
+                  <!-- <div class="row">
+                    <div class="col-25">
+                      <label for="country">Thể Loại</label>
+                    </div>
+                    <div class="col-75">
+                      <select name="idCategory" [(ngModel)]="newss.idCategory" required>
+                        <option value="undefined" [selected]=true [disabled]="true">Lựa Chọn</option>
+                        <option value="1">1</option>
+                      </select>
+                    </div>
+                  </div> -->
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="country">Tài Khoản</label>
+                    </div>
+                    <div class="col-75">
+                      <select name="userName" [(ngModel)]="newss.userName" required>
+                        <option value="undefined" [selected]=true [disabled]="true">Lựa Chọn</option>
+                        <option value="admin">Admin</option>
+
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <button type="submit" style="border-radius: 1px;background: #099d6e;float: right; border-radius: 3px">Lưu</button>
+                  </div>
+                </form>
+                <!-- card -->
+              </div>
+            </div>
+            <!-- card -->
+            <!-- card -->
+            <div class="card">
+              <div class="card-header" data-background-color="red">
+                <h4 class="title">Danh sách tin tức</h4>
+
+              </div>
+              <div class="card-content">
+                <!-- card -->
+
+                <div class="col-lg-12 col-md-12">
+                  <input style="width: 100%;" type="text" placeholder="Tiêu Đề" name="title" [(ngModel)]="filter.title">
+                  <span class="material-input"></span>
+                </div>
+
+                <!-- card -->
+                <div class="col-lg-12 col-md-12">
+                  <div class="card">
+
+                    <div class="card-content table-responsive">
+                      <table class="table table-hover">
+                        <thead class="text-warning">
+                          <tr>
+                            <th>Tiêu đề</th>
+                            <th>Thời Gian</th>
+                            <th>Miêu tả</th>
+                            <th>Chi tiết</th>
+                            <th>Lựa chọn</th>
+                            <th>Tài khoản</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let tr of news| trainer:filter | slice:(page-1)*limit:page*limit">
+                            <td>
+                              <p style=" white-space: nowrap;
+                                      width: 50px;
+                                      overflow: hidden;
+                                      text-overflow: ellipsis;">{{tr.title}}</p>
+                            </td>
+                            <td>{{tr.createAt|date:'dd-MM-yyyy'}}</td>
+                            <td>
+                              <p style=" white-space: nowrap;
+                                        width: 200px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;">{{tr.description}}</p>
+                            </td>
+                            <td>
+                              <p style=" white-space: nowrap;
+                                      width: 50px;
+                                      overflow: hidden;
+                                      text-overflow: ellipsis;">{{tr.details}}</p>
+                            </td>
+                            <td>{{tr.idCategory}}</td>
+                            <td>{{tr.userName}}</td>
+                            <td class="td-actions text-right">
+                              <button (click)="updateFeedback(tr)||topFunction()" type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button (click)="deleteNews(tr)" type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                <i class="material-icons">close</i>
+                              </button>
+                            </td>
+                          </tr>
+
+
+                        </tbody>
+
+                      </table>
+                      <!-- paging -->
+                      <div class="btn-group pull-right" style="align-items: 0 auto">
+                            <ul class="pagination" >
+                            <li [ngClass]="{'disabled': (page == 1)}" (click)="(page == 1) || prevPage()"><a   href="javascript:void(0)">Prev</a></li>
+                                <li *ngFor="let page1 of  (pagesIndex | slice:pagesIndex.length - 4);"  [ngClass]="{'active': (currentIndex == page)}">
+                                    <a (click)="setPage(page1)" href="javascript:void(0)" >{{page1}}</a>
+                                </li>
+                            <li  [ngClass]="{'disabled': (page == max)}"><a   (click)="(page == max) || nextPage()" href="javascript:void(0)" >Next</a></li>
+                            </ul>
+                        </div>
+                      <!-- paging -->
+                    </div>
+                  </div>
+                </div>
+                <!-- card -->
+
+                <!-- card -->
+              </div>
+            </div>
+          </div>
+
+          <!-- footer -->
+          <app-footer></app-footer>
+          <!-- footer -->
+        </div>
+      </div>

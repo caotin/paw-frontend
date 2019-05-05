@@ -1,0 +1,71 @@
+<main-header></main-header>
+
+  <div id="barba-wrapper">
+    <div class="barba-container expertise page" data-namespace="page_expertise" data-page-color="">
+      <div class="pageVisual no-visual">
+        <div class="container no-padding">
+          <div class="col-sm-7 col-md-6 no-padding-left pageVisual__subWrapper">
+            <h1 class="pageVisual__sub homeSection__sub" id="typed"></h1>
+          </div>
+          <div class="col-sm-5 col-md-6 pageVisual__imageWrapper no-padding-right">
+            <img class="pageVisual__image lazy center-block" data-src="">
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+      var typeString = "<p>Using seniority, tools<br \/>\nand learn how to do it<\/p>"
+        </script>
+
+        <div class="settoriContent">
+          <div class="container no-padding">
+            <div class="breadcrumbs">
+              <span xmlns:v="http://rdf.data-vocabulary.org/#">
+                <span typeof="v:Breadcrumb">
+                  <a [routerLink]="['/home']" rel="v:url" property="v:title">Home</a> /
+                  <span class="breadcrumb_last">events</span>
+                </span>
+              </span>
+            </div>
+            <div class="settoriContent__mainText text-center">
+              <h1 class="homeSection__sub settoriContent__sub">{{event?.title}}</h1>
+              <div class="settoriContent__txt col-sm-9 col-md-8 no-padding center-block">
+                <div class="page" title="Page 9">
+                  <div class="section">
+                    <div class="layoutArea">
+                      <div class="column">
+                        <p class="sologan">
+                          {{event?.description}}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="lifestyleWrapper__list clearfix">
+                <li class="lifestyleWrapper__img no-padding" [innerHTML]="event?.details">
+                </li>
+              </ul>
+
+              <div class="formLabel clearfix" style="background-color: #F5F5F5;">
+                <div class="col-sm-8 no-padding formLabel__txtWrapper">
+                  <span class="formLabel__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50.4" height="51.5" baseProfile="tiny">
+                      <g>
+                      <path d="M36.4 21.5c-2 0-3.7 1.7-3.7 3.7s1.7 3.7 3.7 3.7 3.7-1.7 3.7-3.7-1.7-3.7-3.7-3.7zm-22.4 0c-2 0-3.7 1.7-3.7 3.7s1.7 3.7 3.7 3.7 3.7-1.7 3.7-3.7-1.6-3.7-3.7-3.7zm11.2 0c-2 0-3.7 1.7-3.7 3.7s1.7 3.7 3.7 3.7 3.7-1.7 3.7-3.7-1.7-3.7-3.7-3.7z"></path>
+                    <path d="M50 51.5l-15.6-2.8c-2.9 1.1-6 1.7-9.2 1.7C11.3 50.4 0 39.1 0 25.2S11.3 0 25.2 0s25.2 11.3 25.2 25.2c0 5.6-1.9 11.1-5.4 15.5l5 10.8zm-15.8-4.9l12.4 2.3-3.8-8.4.4-.5c3.4-4.1 5.3-9.4 5.3-14.8C48.4 12.4 38 2 25.2 2S2 12.4 2 25.2s10.4 23.2 23.2 23.2c3 0 5.9-.6 8.7-1.7l.3-.1z"></path>
+                  </g>
+                </svg>
+              </span>
+              <strong class="homeSection__sub formLabel__sub">Want to know more?</strong>
+            </div>
+            <div class="col-sm-4 formLabel__buttonWrapper">
+              <a href="#" class="button button--black button--arrow">Get in touch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+<main-footer></main-footer>

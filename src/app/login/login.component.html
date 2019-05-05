@@ -1,0 +1,69 @@
+<main-header></main-header>
+
+<div class="magento">
+  <div class="account-login">
+
+    <div class="page-title">
+      <h1>ĐĂNG NHẬP HOẶC ĐĂNG KÝ TUYỂN DỤNG</h1>
+    </div>
+
+
+    <form id="login-form" (ngSubmit)="login()">
+      <input name="form_key" type="hidden">
+      <div class="fieldset">
+        <div class="col2-set">
+          <div class="col-1 registered-users">
+            <h2 class="legend">Đăng Nhập</h2>
+            <p>Nếu bạn đã là thành viên, xin vui lòng đăng nhập bằng email của bạn.</p>
+            <ul class="form-list">
+              <li>
+                <label for="email" class="required"><em>*</em>Email Address</label>
+                <div class="input-box validation-passed">
+                  <input name="password" [(ngModel)]="username"  id="email" type="email" class="input-text required-entry validate-email validation-passed" >
+                </div>
+              </li>
+              <li>
+                <label for="pass" class="required"><em>*</em>Password</label>
+                <div class="input-box validation-passed">
+                  <input  type="password" name="password" [(ngModel)]="password" class="input-text required-entry validate-password validation-passed" >
+                </div>
+              </li>
+
+            </ul>
+            <div class="form-list">
+              <div class="note">
+                <a href="#">Bạn đã quên Password?</a>
+              </div>
+              <div class="buttons-set">
+                <button type="submit" class="button button--black homeSection__button" name="send"><span><span>ĐĂNG NHẬP</span></span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-2 new-users">
+            <h2 class="legend">Đăng Ký Tuyển Dụng</h2>
+            <p>KAI SWIM là trung tâm dạy bơi kèm riêng với tiêu chí cung cấp cho học viên giờ học
+              an toàn, hiệu quả nhất. Bằng việc cung cấp các khóa dạy bơi kèm riêng cam kết chất
+              lượng, giảng dạy theo chuẩn kiến thức, phù hợp với thể trạng, khả năng, thời gian học
+              tập của học viên. Chúng tôi đã và đang giúp cho rất nhiều học viên sợ nước, chưa biết
+              bơi đến biết bơi và bơi đẹp trong khoảng 10-12 buổi học.</p>
+            <div class="form-list">
+              <div class="buttons-set">
+                <button type="button" disabled class="button button--black homeSection__button">
+                  <span>
+                    <span [routerLink]="['/register']">ĐĂNG KÝ</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<main-footer></main-footer>
+

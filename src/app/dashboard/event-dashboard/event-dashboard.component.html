@@ -1,0 +1,113 @@
+<div class="wrapper">
+
+  <div class="sidebar" data-color='red' data-image="">
+    <!-- sidebar -->
+    <app-sidebar></app-sidebar>
+    <!-- sidebar -->
+    <div class="sidebar-background" style="background-image: url(../assets/img/sidebar-4.jpg)"></div>
+  </div>
+  <div class="main-panel">
+    <!-- navbar -->
+    <app-navbar></app-navbar>
+    <!-- navbar -->
+    <div class="main-content">
+      <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <!-- card-header -->
+              <div class="card-header" data-background-color="red">
+                <h4 class="title">Biểu mẫu</h4>
+                <p class="category">Hoàn thành để được vào dữ liệu</p>
+              </div>
+              <!-- card-header -->
+              <div class="container-content">
+                <form (ngSubmit)="processForm()" ngNativeValidate>
+                  <!-- row -->
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="fname">Tiêu Đề</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" name="title" [(ngModel)]="event.title" placeholder="Tiêu Đề.." required>
+                    </div>
+                  </div>
+                  <!-- row -->
+                  <!-- row -->
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="lname">Miêu Tả</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" name="description" [(ngModel)]="event.description" placeholder="Miêu tả.." required>
+                    </div>
+                  </div>
+                  <!-- row -->
+                  <!-- row -->
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="country">Thời gian tạo</label>
+                    </div>
+                    <div class="col-75">
+                      <input placeholder="Thời gian tạo" type="date" name="time" [(ngModel)]="time" required>
+                    </div>
+                  </div>
+                  <!-- row -->
+                  <!-- row -->
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="country">Hình Ảnh</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="file" id="filePicker" (change)="handleFileSelect($event)">
+                    </div>
+                  </div>
+                  <!-- row -->
+                  <!-- row -->
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="country">Chi Tiết</label>
+                    </div>
+                    <div class="col-75">
+                      <!-- <input placeholder="Chi Tiết" type="text" name="details" [(ngModel)]="event.details" required> -->
+                      <app-ngx-editor [config]="editorConfig" [spellcheck]="true" name="details" [(ngModel)]="event.details" class="details_ngx"></app-ngx-editor>
+                    </div>
+                  </div>
+                  <!-- row -->
+                  <!-- row -->
+                  <!-- <div class="row">
+                    <div class="col-25">
+                      <label for="country">Thể Loại</label>
+                    </div>
+                    <div class="col-75">
+                      <select name="idCategory" [(ngModel)]="event.idCategory" required>
+                        <option value="undefined" [selected]=true [disabled]="true">Chọn Thể Loại</option>
+                        <option value="1">147</option>
+                        <option value="2">124</option>
+                      </select>
+                    </div>
+                  </div> -->
+                  <!-- row -->
+
+                  <!-- row -->
+                  <div class="row">
+                    <button type="submit" style="border-radius: 1px;background: #099d6e;float: right; border-radius: 3px; border-radius: 3px">Lưu</button>
+                  </div>
+                  <!-- row -->
+                </form>
+              </div>
+              <!-- card-header -->
+
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <app-footer></app-footer>
+    <!-- footer -->
+  </div>
+</div>

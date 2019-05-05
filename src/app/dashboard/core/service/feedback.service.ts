@@ -1,0 +1,66 @@
+import { Injectable } from '@angular/core';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
+import { Feedback } from '../../core/model/feedback';
+@Injectable()
+export class FeedbackService {
+    private baseUrl: string = 'http://45.77.44.246:8080/api';
+    private headers = new Headers({ 'Content-Type': 'application/json' });
+    private options = new RequestOptions({ headers: this.headers });
+    private feedback = new Feedback();
+    public token: string;
+    constructor(private _http: Http) {
+        this.token = localStorage.getItem('token');
+    }
+    // getdata
+    getFeedback() {
+        let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
+        let options = new RequestOptions({ headers: headers });
+        // getdata
+        return this._http.get('http://45.77.44.246:8080/api/feedback', options).map((response: Response) => response.json());
+    }
+    // Add data
+    createFeedback(feedback: Feedback) {
+        let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
+        headers.append('Content-Type', 'application/json');
+        let options = new RequestOptions({ headers: headers });
+        // create
+        return this._http.post('http://45.77.44.246:8080/api/feedback/new', JSON.stringify(feedback), options).map(this.extractData).catch(this.errorHandler);
+
+    }
+    // update data
+    updateFeedback(feedback: Feedback) {
+        let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
+        headers.append('Content-Type', 'application/json');
+        let options = new RequestOptions({ headers: headers });
+        // create
+        return this._http.put('http://45.77.44.246:8080/api/feedback/update', JSON.stringify(feedback), options).map(this.extractData).catch(this.errorHandler);
+
+    }
+    // delete data
+    deleteFeedback(id: Number) {
+        let headers = new Headers({ 'Authorization': 'Bearer ' + this.token });
+        let options = new RequestOptions({ headers: headers });
+
+        return this._http.delete('http://45.77.44.246:8080/api/feedback/delete/' + id, options).map(this.extractData).catch(this.errorHandler);
+    }
+    // set data
+    setter(feedback: Feedback) {
+        this.feedback = feedback;
+    }
+    // get data
+    getter() {
+        return this.feedback;
+    }
+    // Error
+    errorHandler(error: Response) {
+        return Observable.throw(error || 'SERVER ERROR');
+    }
+    private extractData(res: Response) {
+        return res.text() ? res.json() : {};
+    }
+}

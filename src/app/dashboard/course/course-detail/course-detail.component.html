@@ -1,0 +1,76 @@
+<div class="wrapper">
+
+  <div class="sidebar" data-color='red' data-image="">
+      <!-- sidebar -->
+      <app-sidebar></app-sidebar>
+       <!-- sidebar -->
+      <div class="sidebar-background" style="background-image: url(../assets/img/sidebar-4.jpg)"></div>
+  </div>
+  <div class="main-panel">
+      <!-- navbar -->
+      <app-navbar></app-navbar>
+     <!-- navbar -->
+
+
+     <div class="main-content">
+      <div class="container-fluid">
+          <div class="card">
+                <div class="card-header" data-background-color="red" >
+                        <h4 class="title" >Danh Sách Giáo Viên</h4>
+                      <div class="input-field col s10" >
+
+                      <div class="form-group form-black is-empty" style="text-align: center;">
+                          <input type="text" class="form-control" placeholder="Tên Lớp" name="name" [(ngModel)]="filter.name" style="border-radius: 3px">
+                          <span class="material-input"></span>
+                      </div>
+
+                      </div>
+                    </div>
+          <div class="content-card">
+
+               <!-- panel -->
+            <div class="panel" *ngFor="let tr of course | course:filter | slice:(page-1)*limit:page*limit">
+                <div class="panel-heading">
+                     <!-- edit -->
+                     <button  (click)="updateCourse(tr)" type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs" style=" position: absolute;right: 0px;top: 0px;">
+                          <i class="material-icons">edit</i>
+                      </button>
+                      <!-- edit -->
+                    <!-- remove -->
+                    <button (click)="deleteCourse(tr)" type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs" style=" position: absolute;right: 20px;top: 0px;">
+                          <i class="material-icons">close</i>
+                      </button>
+                     <!-- remove -->
+                    <span class="panel-title">{{tr.name}}</span>
+                </div>
+                <div class="panel-body" style="margin-top: 15px">
+                    <h2>{{tr.status}}</h2>
+                    <p>{{tr.description}}</p>
+                </div>
+                <div class="panel-body-right">
+                 <img src="http://45.77.44.246:8080{{tr.image}}" >
+               </div>
+            </div>
+            <!-- panel -->
+
+        </div>
+        <!-- paging -->
+        <div class="btn-group pull-right" style="align-items: 0 auto">
+          <ul class="pagination" >
+            <li [ngClass]="{'disabled': (page == 1)}" (click)="(page == 1) || prevPage()"><a   href="javascript:void(0)">Prev</a></li>
+              <li *ngFor="let page1 of  (pagesIndex );"  [ngClass]="{'active': (currentIndex == page)}">
+                  <a (click)="setPage(page1)" href="javascript:void(0)" >{{page1}}</a>
+              </li>
+            <li  [ngClass]="{'disabled': (page == max)}"><a   (click)="(page == max) || nextPage()" href="javascript:void(0)" >Next</a></li>
+          </ul>
+       </div>
+      <!-- paging -->
+          </div>
+      </div>
+  </div>
+
+<!-- footer -->
+<app-footer></app-footer>
+<!-- footer -->
+</div>
+</div>

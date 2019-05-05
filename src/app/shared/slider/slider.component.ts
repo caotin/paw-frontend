@@ -1,0 +1,42 @@
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Slider } from 'ngx-slider';
+import { HomeService } from '../../core/services/home.service';
+
+@Component({
+    selector: 'slider',
+    templateUrl: './slider.component.html',
+    styleUrls: ['./slider.component.css'],
+    providers: [HomeService],
+    changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class SliderComponent implements OnInit {
+
+    public slider = new Slider();
+
+    constructor(private homeService: HomeService, private ref: ChangeDetectorRef) {
+        this.slider.config.loop = true;
+        this.slider.config.showPreview = false;
+        this.slider.config.showTitle = false;
+        this.slider.config.showNavigator = true;
+        this.slider.config.showDots = true;
+        // this.slider.config.previewWidth = 20;
+
+    }
+
+    ngOnInit() {
+
+        this.homeService.getTopSlide().subscribe(
+            data => {
+                // console.log(data);
+                data.forEach(element => {
+                    this.slider.items.push({ src: 'http://45.77.44.246:8080' + element.image, title: element.title });
+                });
+            }
+
+        );
+        setInterval(() => {
+            this.ref.markForCheck();
+        }, 1000);
+    }
+
+}

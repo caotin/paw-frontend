@@ -1,0 +1,105 @@
+<main-header>
+</main-header>
+<div id="barba-wrapper">
+  <div class="barba-container team page" data-namespace="page_team" data-page-color="">
+    <div class="pageVisual no-visual">
+      <div class="container no-padding">
+        <div class="col-sm-7 col-md-6 no-padding-left pageVisual__subWrapper">
+          <h1 class="pageVisual__sub homeSection__sub" id="typed"></h1>
+        </div>
+        <div class="col-sm-5 col-md-6 pageVisual__imageWrapper no-padding-right">
+          <img class="pageVisual__image lazy center-block" data-src="">
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var typeString = "<p>Pleased to meet you<\/p>"
+    </script>
+    <div class="settoriContent">
+      <div class="container no-padding">
+        <div class="breadcrumbs">
+          <span xmlns:v="http://rdf.data-vocabulary.org/#">
+            <span typeof="v:Breadcrumb">
+              <a [routerLink]="['/home']" rel="v:url" property="v:title">Home</a> /
+              <span class="breadcrumb_last">Trainers</span>
+            </span>
+          </span>
+        </div>
+        <div class="settoriContent__mainText text-center">
+          <h1 class="homeSection__sub settoriContent__sub">ĐỘI NGŨ GIẢNG VIÊN CHUYÊN NGHIỆP</h1>
+          <div class="settoriContent__txt col-sm-9 col-md-8 no-padding center-block">
+            <div class="page" title="Page 10">
+              <div class="section">
+                <div class="layoutArea">
+                  <div class="column" style="text-align: justify;font-family: 'Noto Serif', serif!important;">
+                    <p>
+                      Đội ngũ giảng viên cho khóa dạy bơi cấp tốc gồm cả nam và nữ được đào tạo bài bản trong môi trường sư phạm chuyên sâu, hoặc
+                      vận động viên bơi lội chuyên nghiệp và có nhiều kinh nghiệm trong quá trình giảng dạy. Chúng tôi luôn
+                      nắm bắt các yêu cầu, thể trạng và yếu tố tâm lý của từng học viên để có phương án dạy bơi cấp tốc phù
+                      hợp với từng đối tượng.
+                    </p>
+                    <p>
+                      Dưới sự giám sát chặt chẽ tận tâm (1-kèm-1) của các huấn luyện viên, học viên sẽ nắm bắt được toàn diện các động tác kỹ thuật
+                      bơi lội một cách chính xác và nhanh chóng nhất. Vì thế, chúng tôi hoàn toàn cam kết chất lượng 100%,
+                      đáp ứng được mọi nguyện vọng của học viên, đặc biệt là các học viên với nhu cầu học bơi cấp tốc để
+                      nhanh chóng đạt được mục đích đặt ra trong quỹ thời gian có giới hạn.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="teamWrap">
+      <div class="container no-padding">
+        <ul class="teamWrap__list clearfix">
+          <li *ngFor="let trainers of traineritems" routerLinkActive="active" class="col-md-4 col-sm-6 teamWrap__person lazy no-padding">
+            <img src="http://45.77.44.246:8080{{trainers.image}}" />
+            <div class="teamWrap__content text-center">
+              <strong class="teamWrap__name">{{trainers.firstName+" "+trainers.lastName}}</strong>
+              <span class="teamWrap__role">Vai Trò: {{trainers.description}}</span>
+              <span class="teamWrap__role">Ngày Sinh: {{trainers.birthday|date:'dd-MM-yyyy'}}</span>
+              <span class="teamWrap__role">Địa Chỉ: {{trainers.address}}</span>
+              <span class="teamWrap__role">SDT: {{trainers.phone}}</span>
+            </div>
+            <div class="teamWrap__overlay"></div>
+          </li>
+
+          <li class="col-md-4 col-sm-6 teamWrap__person teamWrap__work linkTo">
+            <div class="teamWrap__content">
+              <strong class="peopleWrap__title homeSection__title">Work with us</strong>
+              <div class="peopleWrap__exc homeSection__sub">
+                <a href="contact-us">
+                  <p>Be the next</p>
+                  <p>in line to join us</p>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+
+        <div class="formLabel clearfix">
+          <div class="col-sm-8 no-padding formLabel__txtWrapper">
+            <span class="formLabel__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50.4" height="51.5" baseProfile="tiny">
+                <g>
+                  <path d="M36.4 21.5c-2 0-3.7 1.7-3.7 3.7s1.7 3.7 3.7 3.7 3.7-1.7 3.7-3.7-1.7-3.7-3.7-3.7zm-22.4 0c-2 0-3.7 1.7-3.7 3.7s1.7 3.7 3.7 3.7 3.7-1.7 3.7-3.7-1.6-3.7-3.7-3.7zm11.2 0c-2 0-3.7 1.7-3.7 3.7s1.7 3.7 3.7 3.7 3.7-1.7 3.7-3.7-1.7-3.7-3.7-3.7z"></path>
+                  <path d="M50 51.5l-15.6-2.8c-2.9 1.1-6 1.7-9.2 1.7C11.3 50.4 0 39.1 0 25.2S11.3 0 25.2 0s25.2 11.3 25.2 25.2c0 5.6-1.9 11.1-5.4 15.5l5 10.8zm-15.8-4.9l12.4 2.3-3.8-8.4.4-.5c3.4-4.1 5.3-9.4 5.3-14.8C48.4 12.4 38 2 25.2 2S2 12.4 2 25.2s10.4 23.2 23.2 23.2c3 0 5.9-.6 8.7-1.7l.3-.1z"></path>
+                </g>
+              </svg>
+            </span>
+            <strong class="homeSection__sub formLabel__sub">Want to know more?</strong>
+          </div>
+          <div class="col-sm-4 formLabel__buttonWrapper">
+            <a routerLink="/home" class="button button--black button--arrow">Get in touch</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<main-footer></main-footer>
